@@ -112,7 +112,7 @@ class Geocoder:
                     self._last_request_time = time.time()
 
                 # Nominatim REQUIRES a User-Agent
-                headers = {"User-Agent": "Dossigraphica-Geocoder/1.0 (local-research-agent)"}
+                headers = {"User-Agent": "Gridgraphica-Geocoder/1.0 (local-research-agent)"}
                 email = os.getenv("NOMINATIM_EMAIL")
                 
                 async with httpx.AsyncClient(timeout=10.0) as client:

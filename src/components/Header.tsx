@@ -46,7 +46,7 @@ export default function Header({
                     </div>
                     <div>
                         <h1 className="text-2xl font-serif font-bold text-[var(--color-ink)] leading-none uppercase tracking-tighter">
-                            Dossigraphica
+                            Gridgraphica
                         </h1>
                         <p className="text-[10px] font-mono font-bold text-[var(--color-ink-muted)] uppercase tracking-widest mt-1">
                             An Atlas of Corporate Intelligence

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Intel Registry Script for Dossigraphica
-=======================================
+Intel Registry Script for Gridgraphica
+======================================
 Automatically builds the master companies.json list by scanning 
 the high-fidelity research files in public/data/intel/*.json.
 
@@ -22,7 +22,7 @@ INTEL_DIR = os.path.join(PROJECT_ROOT, "public", "data", "intel")
 OUTPUT_JSON = os.path.join(PROJECT_ROOT, "src", "data", "companies.json")
 
 def main():
-    print(f"\n📂 Dossigraphica Intel Registry")
+    print(f"\n📂 Gridgraphica Intel Registry")
     print(f"{'─' * 40}")
     
     intel_files = glob.glob(os.path.join(INTEL_DIR, "*.json"))

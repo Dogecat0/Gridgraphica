@@ -200,7 +200,7 @@ h4 {
   transform: scale(1.3);
 }
 
-/* ===== Intel Nodes (Dossigraphica Style) ===== */
+/* ===== Intel Nodes (Gridgraphica Style) ===== */
 .intel-node-marker {
   position: absolute;
   transform: translate(calc(-50% + var(--stack-dx, 0px)), calc(-50% + var(--stack-dy, 0px)));

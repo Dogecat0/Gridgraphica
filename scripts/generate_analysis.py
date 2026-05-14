@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Analysis Generator for Dossigraphica
-====================================
+Analysis Generator for Gridgraphica
+===================================
 Aggregates individual company intel files into cross-company analysis files:
 - global_capacity.json
 - regional_concentration.json
