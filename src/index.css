@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ===== Archivist Design Tokens ===== */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Crimson Pro', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Paper & Ink Palette */
+  --color-bg-paper: #fdfcf0;
+  --color-bg-paper-dark: #f4f3e6;
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #4a4a4a;
+  --color-ink-light: #8a8a8a;
+
+  --color-border-ink: #1a1a1a;
+  --color-border-muted: rgba(26, 26, 26, 0.15);
+
+  /* Archivist Accents (Muted, Cartographic) */
+  --color-accent-blue: #2a5a8a;
+  --color-accent-red: #a33333;
+  --color-accent-green: #3d6a4a;
+  --color-accent-gold: #b08d57;
+
+  --color-bg-primary: var(--color-bg-paper);
+  --color-text-primary: var(--color-ink);
+  --color-text-secondary: var(--color-ink-muted);
+}
+
+/* ===== Global Reset ===== */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-bg-paper);
+  /* Subtle paper texture */
+  background-image:
+    url("https://www.transparenttextures.com/patterns/felt.png"),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.02) 100%);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Typography ===== */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* ===== Archivist Layout Components ===== */
+
+.dossier-panel {
+  background-color: var(--color-bg-paper);
+  border-left: 2px solid var(--color-ink);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 50;
+}
+
+.dossier-card {
+  background: white;
+  border: 1px solid var(--color-border-ink);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.dossier-card::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-ink);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Index Tabs Styling */
+.index-tab {
+  border: 1px solid var(--color-ink);
+  border-bottom: none;
+  background: var(--color-bg-paper-dark);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: -1px;
+}
+
+.index-tab.active {
+  background: var(--color-bg-paper);
+  padding-top: 0.75rem;
+  margin-top: -0.25rem;
+  z-index: 10;
+  border-bottom: 2px solid var(--color-bg-paper);
+  margin-bottom: -2px;
+}
+
+/* Bookmark Strip */
+.bookmark-strip {
+  width: 48px;
+  background: var(--color-ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 1.5rem;
+  z-index: 60;
+}
+
+.bookmark-icon {
+  color: var(--color-bg-paper);
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.bookmark-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ===== Globe Overrides ===== */
+.scene-container {
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== Scrollbar (Old Style) ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-paper-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-light);
+  border: 1px solid var(--color-bg-paper-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-muted);
+}
+
+/* ===== Animations ===== */
+@keyframes slide-open {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-open {
+  animation: slide-open 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Rule line effect */
+.ruled-line {
+  border-bottom: 1px solid var(--color-border-muted);
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+/* Custom Marker for Archivist */
+.archivist-marker {
+  width: 12px;
+  height: 12px;
+  background: var(--color-bg-paper);
+  border: 2px solid var(--color-ink);
+  border-radius: 50%;
+  box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.archivist-marker.selected {
+  background: var(--color-ink);
+  transform: scale(1.3);
+}
+
+/* ===== Intel Nodes (Dossigraphica Style) ===== */
+.intel-node-marker {
+  position: absolute;
+  transform: translate(calc(-50% + var(--stack-dx, 0px)), calc(-50% + var(--stack-dy, 0px)));
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.intel-node-marker.dimmed {
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.intel-node-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--node-color, var(--color-ink));
+  border: 2px solid var(--color-bg-paper);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px var(--node-color, var(--color-ink)),
+    1px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intel-node-marker:hover .intel-node-dot {
+  background: var(--node-color, var(--color-ink));
+  transform: scale(1.4);
+  box-shadow: 0 0 16px var(--node-color, var(--color-ink)), 0 0 4px var(--node-color, var(--color-ink));
+  border-color: transparent;
+}
+
+.intel-node-tooltip {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  /* shifted further out */
+  transform: translateY(-50%) translateX(10px);
+  background: rgba(253, 252, 240, 0.85);
+  /* var(--color-bg-paper) with opacity for glassmorphism */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(26, 26, 26, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  padding: 0.75rem 1rem;
+  width: max-content;
+  max-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  font-family: var(--font-sans);
+  z-index: 20;
+}
+
+.intel-node-tooltip::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 20px;
+  height: 1px;
+  background: var(--node-color, var(--color-ink-muted));
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.intel-node-marker:hover .intel-node-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+.intel-tt-label {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-ink);
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.intel-tt-sublabel {
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--color-ink-muted);
+  font-size: 0.75rem;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.intel-tt-detail {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-ink);
+  line-height: 1.4;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+/* ===== Global Layer Overrides ===== */
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(163, 51, 51, 0.7);
+  }
+
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(163, 51, 51, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(163, 51, 51, 0);
+  }
+}
+
+.intel-node-dot.type-chokepoint {
+  width: 20px;
+  height: 20px;
+  background: rgba(239, 68, 68, 0.2);
+  border: 3px solid var(--color-accent-red);
+  box-shadow: 0 0 12px var(--color-accent-red);
+  animation: pulse-red 2.5s infinite;
+}
+
+/* ===== Regional Risk Shield Icon ===== */
+.intel-node-shield {
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(37, 99, 235, 0.5))
+         drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  animation: pulse-blue 3s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intel-node-marker:hover .intel-node-shield {
+  filter: drop-shadow(0 0 14px rgba(37, 99, 235, 0.8))
+         drop-shadow(0 0 6px rgba(37, 99, 235, 0.6));
+  transform: scale(1.3);
+}
+
+@keyframes pulse-blue {
+  0% {
+    filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.4))
+           drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.7))
+           drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.4))
+           drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+}
+
+/* Risk dot variant (per-company, blue) */
+.intel-node-dot.type-risk {
+  border-color: rgba(253, 252, 240, 0.85);
+}
+
+/* ===== Summary Stat Bar ===== */
+.stat-summary-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--color-ink);
+  border: 1px solid var(--color-ink);
+  margin-bottom: 1.5rem;
+}
+
+.stat-summary-bar > div {
+  background: var(--color-bg-paper);
+  padding: 0.75rem 1rem;
+}
+
+.stat-fill-bar {
+  height: 4px;
+  background: var(--color-bg-paper-dark);
+  border: 1px solid var(--color-border-muted);
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.stat-fill-bar-inner {
+  height: 100%;
+  background: var(--color-accent-red);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== Dependency Group (Chain Tab) ===== */
+.dep-group {
+  border: 1px solid var(--color-border-muted);
+  margin-bottom: 0.75rem;
+  background: white;
+}
+
+.dep-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.dep-group-header:hover {
+  background: var(--color-bg-paper-dark);
+}
+
+.dep-group.expanded .dep-group-header {
+  border-bottom-color: var(--color-border-muted);
+}
+
+.dep-group-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dep-group.expanded .dep-group-body {
+  max-height: 2000px;
+}
+
+.dep-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--color-border-muted);
+  font-size: 0.8rem;
+  transition: background 0.15s ease;
+}
+
+.dep-row:last-child {
+  border-bottom: none;
+}
+
+.dep-row:hover {
+  background: var(--color-bg-paper-dark);
+}
+
+.dep-row.is-critical {
+  background: rgba(163, 51, 51, 0.04);
+  border-left: 3px solid var(--color-accent-red);
+  padding-left: calc(1rem - 3px);
+}
+
+.dep-row.is-critical:hover {
+  background: rgba(163, 51, 51, 0.08);
+}
+
+.dep-direction {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-ink-muted);
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.dep-direction.outgoing {
+  color: var(--color-accent-blue);
+}
+
+.dep-direction.incoming {
+  color: var(--color-accent-green);
+}
+
+/* ===== Risk Table (Macro Risk Tab) ===== */
+.risk-table-header {
+  display: grid;
+  grid-template-columns: 6px 1fr 52px 80px 70px 28px;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-muted);
+}
+
+.risk-row {
+  display: grid;
+  grid-template-columns: 6px 1fr 52px 80px 70px 28px;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border-muted);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.risk-row:hover {
+  background: var(--color-bg-paper-dark);
+}
+
+.risk-row.expanded {
+  background: var(--color-bg-paper-dark);
+  border-bottom-color: transparent;
+}
+
+.risk-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.risk-detail-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--color-bg-paper-dark);
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.risk-detail-panel.expanded {
+  max-height: 600px;
+}
+
+.risk-detail-inner {
+  padding: 1rem 1.25rem;
+}
+
+/* Entity risk blocks — small squares representing score 1-5 */
+.risk-entity-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.risk-entity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.risk-blocks {
+  display: flex;
+  gap: 1px;
+}
+
+.risk-block {
+  width: 5px;
+  height: 10px;
+  background: var(--color-bg-paper-dark);
+  border: 1px solid var(--color-border-muted);
+}
+
+.risk-block.filled {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+/* ===== Chevron animation ===== */
+.chevron-icon {
+  transition: transform 0.25s ease;
+  color: var(--color-ink-muted);
+}
+
+.chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* ===== Stacked Node Count Badge ===== */
+.intel-node-count-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: var(--color-ink);
+  color: var(--color-bg-paper);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 15;
+}
+/* ===== Research Report Markdown Styles ===== */
+.research-prose-archivist table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  background: white;
+  border: 1px solid var(--color-ink);
+}
+
+.research-prose-archivist th {
+  background: var(--color-ink);
+  color: white;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.research-prose-archivist td {
+  padding: 0.75rem;
+  border: 1px solid var(--color-border-muted);
+  color: var(--color-ink);
+  line-height: 1.4;
+}
+
+.research-prose-archivist tr:nth-child(even) {
+  background: var(--color-bg-paper-dark);
+}
+
+.research-prose-archivist tr:hover {
+  background: rgba(42, 90, 138, 0.05); /* Very light blue tint */
+}

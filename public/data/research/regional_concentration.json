@@ -1,0 +1,44 @@
+{
+  "lastUpdated": "2026-05-14T22:53:56.918637",
+  "regions": [
+    {
+      "region": "Other",
+      "lat": 37.7066,
+      "lng": -84.9553,
+      "dataCenterCount": 3,
+      "topCompanies": [
+        {
+          "ticker": "AMZN",
+          "count": 3
+        }
+      ],
+      "summary": "Major infrastructure hub with 3 key data centers."
+    },
+    {
+      "region": "North America",
+      "lat": 41.9663,
+      "lng": -90.733,
+      "dataCenterCount": 4,
+      "topCompanies": [
+        {
+          "ticker": "MSFT",
+          "count": 4
+        }
+      ],
+      "summary": "Major infrastructure hub with 4 key data centers."
+    },
+    {
+      "region": "Europe",
+      "lat": 68.43,
+      "lng": 17.43,
+      "dataCenterCount": 1,
+      "topCompanies": [
+        {
+          "ticker": "MSFT",
+          "count": 1
+        }
+      ],
+      "summary": "Major infrastructure hub with 1 key data centers."
+    }
+  ]
+}

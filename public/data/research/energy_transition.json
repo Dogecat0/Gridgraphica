@@ -1,0 +1,17 @@
+{
+  "lastUpdated": "2026-05-14T22:53:56.919219",
+  "companies": [
+    {
+      "ticker": "AMZN",
+      "renewableEnergy": "Amazon matches 100% of its global electricity consumption with renewable energy, primarily through wind and solar projects. As of January 2025, it had 621 renewable energy projects globally with a total capacity of 34 GW. It is the world's largest corporate purchaser of renewable energy.",
+      "traditionalEnergy": "Traditional energy sources remain part of the grid mix and are used for backup power, such as diesel generators at data center campuses. Amazon is also investing in natural gas-powered infrastructure and nuclear energy (Small Modular Reactors and X-energy) to support its growing data center power requirements.",
+      "sustainabilityInitiatives": "Amazon is committed to reaching net-zero carbon emissions by 2040. Key initiatives include the Climate Pledge, massive investment in renewable energy projects, development of nuclear power (SMRs), water positive goals for 2030, electrification of its delivery fleet (over 31,000 EVs), and investments in climate technology startups via The Climate Pledge Fund."
+    },
+    {
+      "ticker": "MSFT",
+      "renewableEnergy": "Microsoft has reached 100% renewable energy matching for its global electricity consumption. The portfolio includes 34 gigawatts of contracted carbon-free electricity across 24 countries, utilizing wind, solar, geothermal, hydropower, and nuclear energy sources.",
+      "traditionalEnergy": "Microsoft is actively transitioning away from traditional fossil fuel reliance. While some legacy infrastructure may still utilize grid power, the company is actively replacing backup diesel generators with renewable biofuels and investing in carbon capture and sequestration technologies for any remaining fossil fuel-based energy usage.",
+      "sustainabilityInitiatives": "Microsoft is committed to becoming carbon negative, water positive, and zero waste by 2030. Key initiatives include the $1 billion Climate Innovation Fund, large-scale carbon removal agreements (e.g., BECCS, reforestation), the 'Community-First Infrastructure Initiative', and strict Supplier Code of Conduct requirements for 100% carbon-free energy by 2030."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "lastUpdated": "2026-05-14T22:53:56.918315",
+  "version": "2.0.0",
+  "capacities": [
+    {
+      "ticker": "AMZN",
+      "totalDataCenters": 3,
+      "commissioned": 1,
+      "underConstruction": 0,
+      "planned": 2,
+      "liquidCooled": 1,
+      "airCooled": 1
+    },
+    {
+      "ticker": "MSFT",
+      "totalDataCenters": 5,
+      "commissioned": 2,
+      "underConstruction": 2,
+      "planned": 1,
+      "liquidCooled": 4,
+      "airCooled": 1
+    }
+  ]
+}

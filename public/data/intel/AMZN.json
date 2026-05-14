@@ -1,0 +1,104 @@
+{
+    "company": "Amazon.com, Inc.",
+    "ticker": "AMZN",
+    "website": "https://www.aboutamazon.com",
+    "sector": "Technology and E-commerce",
+    "description": "Amazon is a global technology and e-commerce leader with an expansive geographic footprint, operating massive fulfillment networks, extensive data center campuses for its AWS cloud division across North America and international markets, and a global workforce of over 1.5 million employees dedicated to retail, cloud computing, and artificial intelligence infrastructure.",
+    "anchorFiling": {
+        "reasoning": "The Q1 2026 earnings report is the most recent financial disclosure available for Amazon, providing the latest revenue and operational data.",
+        "type": "Earnings Release",
+        "date": "2026-04-29",
+        "fiscalPeriod": "Q1 2026"
+    },
+    "generatedDate": "2026-05-14",
+    "dataCenters": [
+        {
+            "id": "AMZN-ASHBURN-VA-001",
+            "name": "AWS Northern Virginia Region Hub",
+            "city": "Ashburn",
+            "state": "Virginia",
+            "country": "USA",
+            "address": "Ashburn, VA",
+            "lat": 39.0438,
+            "lng": -77.4874,
+            "itLoadMW": null,
+            "facilityLoadMW": 1500.0,
+            "averageRackDensityKW": null,
+            "energyConsumption": null,
+            "waterConsumption": null,
+            "wue": 0.15,
+            "pue": 1.15,
+            "coolingTechnology": "air",
+            "ownershipType": "owned",
+            "status": "commissioned",
+            "sources": [
+                "https://aws.amazon.com/about-aws/global-infrastructure/"
+            ],
+            "confidence": "verified"
+        },
+        {
+            "id": "AMZN-NEWCARLISLE-IN-001",
+            "name": "Project Rainier",
+            "city": "New Carlisle",
+            "state": "Indiana",
+            "country": "USA",
+            "address": "New Carlisle, IN",
+            "lat": 41.7236,
+            "lng": -86.5011,
+            "itLoadMW": null,
+            "facilityLoadMW": 2400.0,
+            "averageRackDensityKW": null,
+            "energyConsumption": null,
+            "waterConsumption": null,
+            "wue": 0.15,
+            "pue": 1.15,
+            "coolingTechnology": "liquid",
+            "ownershipType": "owned",
+            "status": "planned",
+            "sources": [
+                "https://www.aboutamazon.com/news/aws/aws-indiana-data-center-investment"
+            ],
+            "confidence": "verified"
+        },
+        {
+            "id": "AMZN-WARRENCOUNTY-MS-001",
+            "name": "Warren County Data Center Complex",
+            "city": "Warren County",
+            "state": "Mississippi",
+            "country": "USA",
+            "address": "Warren County, MS",
+            "lat": 32.3525,
+            "lng": -90.8775,
+            "itLoadMW": null,
+            "facilityLoadMW": null,
+            "averageRackDensityKW": null,
+            "energyConsumption": null,
+            "waterConsumption": null,
+            "wue": 0.15,
+            "pue": 1.15,
+            "coolingTechnology": null,
+            "ownershipType": "owned",
+            "status": "planned",
+            "sources": [
+                "https://www.mississippi.org/aws-investment-announcement"
+            ],
+            "confidence": "verified"
+        }
+    ],
+    "energyProfile": {
+        "reasoning": "Amazon's energy profile is compiled from its 2024 Sustainability Report and related corporate disclosures. The company has achieved its goal of matching 100% of its global electricity consumption with renewable energy sources for both 2023 and 2024. While the company relies on renewable energy for its operational matching, it continues to utilize traditional energy sources for backup power (e.g., diesel generators) and grid-supplied power in specific regions, while actively investing in nuclear and grid infrastructure.",
+        "totalEnergyConsumption": "In 2023, AWS colocation data centers alone consumed more than 7.8 million megawatt hours of electricity, with total corporate consumption matched 100% by renewable energy in 2024.",
+        "renewableEnergy": "Amazon matches 100% of its global electricity consumption with renewable energy, primarily through wind and solar projects. As of January 2025, it had 621 renewable energy projects globally with a total capacity of 34 GW. It is the world's largest corporate purchaser of renewable energy.",
+        "traditionalEnergy": "Traditional energy sources remain part of the grid mix and are used for backup power, such as diesel generators at data center campuses. Amazon is also investing in natural gas-powered infrastructure and nuclear energy (Small Modular Reactors and X-energy) to support its growing data center power requirements.",
+        "sustainabilityInitiatives": "Amazon is committed to reaching net-zero carbon emissions by 2040. Key initiatives include the Climate Pledge, massive investment in renewable energy projects, development of nuclear power (SMRs), water positive goals for 2030, electrification of its delivery fleet (over 31,000 EVs), and investments in climate technology startups via The Climate Pledge Fund.",
+        "sources": [
+            "https://sustainability.aboutamazon.com/reports",
+            "https://sustainability.aboutamazon.com/2024-amazon-sustainability-report-aws-summary.pdf",
+            "https://sustainability.aboutamazon.com/2024-amazon-sustainability-report.pdf",
+            "https://www.aboutamazon.com/news/sustainability/amazon-sustainability-report-2023",
+            "https://aws.amazon.com/sustainability/data-centers/",
+            "https://www.aboutamazon.com/news/company-news/amazon-25-billion-mississippi-data-centers",
+            "https://www.cnbc.com/2025/10/29/amazon-opens-11-billion-ai-data-center-project-rainier-in-indiana.html"
+        ]
+    }
+}

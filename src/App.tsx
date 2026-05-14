@@ -1,0 +1,273 @@
+import { useMemo, useCallback, useRef, useEffect, useState } from 'react'
+import GlobeView from './components/Globe'
+import type { GlobeViewHandle } from './components/Globe'
+import EntityPopup from './components/EntityPopup'
+import Header from './components/Header'
+import LayerToggle from './components/LayerToggle'
+import IntelPanel from './components/IntelPanel'
+import GlobalPanel from './components/GlobalPanel'
+import companiesData from './data/companies.json'
+import { useGeoIntel } from './useGeoIntel'
+import type { Company, DataCenter, LayerName, MapEntity } from './types'
+import { PanelRightClose, PanelRightOpen, X } from 'lucide-react'
+
+const companies = companiesData as Company[]
+
+export default function App() {
+    const {
+        selectedCompany,
+        setSelectedOfficeId,
+        registerFlyToCallback,
+        isIntelPanelOpen,
+        setIsIntelPanelOpen,
+        isIntelMinimized,
+        setIsIntelMinimized,
+        fetchGeoIntelData,
+        fetchGlobalAnalysis,
+        geoIntelligence,
+        globalCapacity,
+        regionalConcentration,
+        energyTransition,
+        intelLoading,
+        intelError,
+        intelMarkdownContent,
+        globalLoading,
+        globalError
+    } = useGeoIntel()
+
+    const viewMode = selectedCompany ? 'company' : 'global'
+
+    // UI state
+    const [activeLayers, setActiveLayers] = useState<Set<LayerName>>(new Set(['dataCenters']))
+    const [selectedEntity, setSelectedEntity] = useState<MapEntity | null>(null)
+    const [globalTab, setGlobalTab] = useState<'overview' | 'capacity' | 'regions' | 'energy'>('overview')
+
+    const globeRef = useRef<GlobeViewHandle>(null)
+
+    // Initial data fetch
+    useEffect(() => {
+        fetchGlobalAnalysis()
+    }, [fetchGlobalAnalysis])
+
+    // Fetch Intel data and adjust layers when company changes
+    useEffect(() => {
+        if (selectedCompany) {
+            fetchGeoIntelData(selectedCompany.ticker)
+            // Auto-switch layers for company view
+            setActiveLayers(new Set(['dataCenters']))
+            setSelectedEntity(null) // Clear selection
+            
+            // Initial fly-to HQ
+            const hq = selectedCompany.dataCenters[0]
+            if (hq && globeRef.current) {
+                globeRef.current.flyTo(hq.lat, hq.lng, 2.0)
+            }
+        } else {
+            // Auto-switch layers for global view
+            setActiveLayers(new Set(['dataCenters']))
+            setSelectedEntity(null)
+            setGlobalTab('overview')
+        }
+    }, [selectedCompany, fetchGeoIntelData])
+
+    // Handle Global Tab Changes (Dynamic Filtering)
+    const handleGlobalTabChange = useCallback((tab: 'overview' | 'capacity' | 'regions' | 'energy') => {
+        setGlobalTab(tab)
+        if (viewMode === 'global') {
+            switch (tab) {
+                case 'overview':
+                case 'capacity':
+                case 'energy':
+                    setActiveLayers(new Set(['dataCenters']))
+                    break
+                case 'regions':
+                    setActiveLayers(new Set(['regionalHubs']))
+                    break
+            }
+        }
+    }, [viewMode])
+
+    // Register the flyTo callback
+    useEffect(() => {
+        registerFlyToCallback((lat, lng, altitude) => {
+            globeRef.current?.flyTo(lat, lng, altitude)
+        })
+    }, [registerFlyToCallback])
+
+    // Flatten offices: merge base company offices with intel offices if available
+    const allDataCenters = useMemo((): DataCenter[] => {
+        const result: DataCenter[] = []
+        
+        if (viewMode === 'global') {
+            // Global View: Show only HQs of all companies
+            companies.forEach(comp => {
+                comp.dataCenters.forEach(dc => {
+                    result.push({ ...dc, companyId: comp.ticker })
+                })
+            })
+            return result
+        }
+
+        // Company View: Show all offices for selected company ONLY
+        if (selectedCompany) {
+            const compDCs = geoIntelligence?.dataCenters || selectedCompany.dataCenters
+            compDCs.forEach(dc => {
+                result.push({
+                    ...dc,
+                    companyId: selectedCompany.ticker
+                })
+            })
+        }
+
+        return result
+    }, [viewMode, selectedCompany, geoIntelligence, globalCapacity])
+
+    // Fix EntityPopup company lookup bug (for offices)
+    const popupCompany = useMemo(() => {
+        if (!selectedEntity || selectedEntity.type !== 'dataCenter') return null
+        const dc = selectedEntity.data as DataCenter
+        if (selectedCompany && dc.companyId === selectedCompany.ticker) return selectedCompany
+        return companies.find(c => c.ticker === dc.companyId) || null
+    }, [selectedEntity, selectedCompany])
+
+    const handleEntityClick = useCallback((entity: MapEntity | null) => {
+        setSelectedEntity(entity)
+        if (entity && entity.type === 'dataCenter') {
+             setSelectedOfficeId((entity.data as DataCenter).id)
+        } else {
+             setSelectedOfficeId(null)
+        }
+    }, [setSelectedOfficeId])
+
+    const handleClosePopup = useCallback(() => {
+        setSelectedEntity(null)
+        setSelectedOfficeId(null)
+    }, [setSelectedOfficeId])
+
+    const handleToggleIntel = useCallback(() => {
+        setIsIntelPanelOpen(!isIntelPanelOpen)
+    }, [isIntelPanelOpen, setIsIntelPanelOpen])
+
+    const handleLayerToggle = useCallback((layer: LayerName) => {
+        setActiveLayers(prev => {
+            const next = new Set(prev)
+            if (next.has(layer)) {
+                next.delete(layer)
+            } else {
+                next.add(layer)
+            }
+            return next
+        })
+    }, [])
+
+    const handleIntelNavigate = useCallback((lat: number, lng: number) => {
+        globeRef.current?.flyTo(lat, lng)
+    }, [])
+
+    return (
+        <div className="flex h-screen w-screen overflow-hidden bg-[var(--color-bg-paper)]">
+            {/* Main Map Area */}
+            <div className="relative flex-1 min-w-0 flex flex-col transition-all duration-500 ease-in-out">
+                {/* Header */}
+                <Header
+                    companyName={selectedCompany?.company ?? 'Global Value Chain'}
+                    dataCenterCount={allDataCenters.length}
+                    companies={companies}
+                    hasIntel={viewMode === 'global' ? !!globalCapacity : (!!geoIntelligence && !intelError)}
+                    intelOpen={isIntelPanelOpen}
+                    onToggleIntel={handleToggleIntel}
+                    intelLoading={viewMode === 'company' ? intelLoading : globalLoading}
+                />
+
+                {/* 3D Globe */}
+                <div className="flex-1 relative scene-container">
+                    <GlobeView
+                        ref={globeRef}
+                        viewMode={viewMode}
+                        dataCenters={allDataCenters}
+                        onEntityClick={handleEntityClick}
+                        selectedEntity={selectedEntity}
+                        intel={geoIntelligence}
+                        globalCapacity={globalCapacity}
+                        regionalConcentration={regionalConcentration}
+                        energyTransition={energyTransition}
+                        activeLayers={activeLayers}
+                    />
+                </div>
+
+                {/* Entity Popup */}
+                <EntityPopup
+                    entity={selectedEntity}
+                    company={popupCompany}
+                    onClose={handleClosePopup}
+                />
+
+                {/* Layer Toggle */}
+                {!isIntelPanelOpen && (
+                    <LayerToggle
+                        activeLayers={activeLayers}
+                        onToggle={handleLayerToggle}
+                        hasIntel={geoIntelligence !== null || viewMode === 'global'}
+                        viewMode={viewMode}
+                    />
+                )}
+
+                {/* Attribution */}
+                <div className="absolute bottom-2 left-4 z-30">
+                    <p className="text-[10px] text-[var(--color-ink-muted)] opacity-50 font-mono">
+                        GLOBE DATA © OPENSTREETMAP · DOSSIGRAPHICA PROJECT 2026
+                    </p>
+                </div>
+            </div>
+
+            {/* Bookmark Strip */}
+            {isIntelPanelOpen && (
+                <div className="bookmark-strip border-l border-[var(--color-ink)]">
+                    <button
+                        onClick={() => setIsIntelMinimized(!isIntelMinimized)}
+                        className="bookmark-icon mt-4"
+                        title={isIntelMinimized ? "Expand Dossier" : "Minimize Dossier"}
+                    >
+                        {isIntelMinimized ? <PanelRightOpen size={20} /> : <PanelRightClose size={20} />}
+                    </button>
+                    <div className="flex-1" />
+                    <button
+                        onClick={() => setIsIntelPanelOpen(false)}
+                        className="bookmark-icon mb-6"
+                        title="Close Dossier"
+                    >
+                        <X size={20} />
+                    </button>
+                </div>
+            )}
+
+            {/* Intel Panel / Global Panel */}
+            {isIntelPanelOpen && !isIntelMinimized && (
+                <div className="w-[640px] h-full flex flex-col dossier-panel animate-slide-open overflow-hidden">
+                    {viewMode === 'company' ? (
+                        <IntelPanel
+                            intel={geoIntelligence}
+                            loading={intelLoading}
+                            error={intelError}
+                            markdown={intelMarkdownContent}
+                            onClose={handleToggleIntel}
+                            onNavigate={handleIntelNavigate}
+                        />
+                    ) : (
+                        <GlobalPanel
+                            globalCapacity={globalCapacity}
+                            regionalConcentration={regionalConcentration}
+                            energyTransition={energyTransition}
+                            loading={globalLoading}
+                            error={globalError}
+                            activeTab={globalTab}
+                            onTabChange={handleGlobalTabChange}
+                            onClose={handleToggleIntel}
+                            onNavigate={handleIntelNavigate}
+                        />
+                    )}
+                </div>
+            )}
+        </div>
+    )
+}

@@ -1,0 +1,150 @@
+{
+    "company": "Microsoft Corporation",
+    "ticker": "MSFT",
+    "website": "https://www.microsoft.com",
+    "sector": "Technology",
+    "description": "Microsoft Corporation is a global technology leader that develops, licenses, and supports a wide range of software products, services, and hardware. The company maintains a massive international footprint, operating a vast network of hyperscale data centers and AI infrastructure across the United States, Europe, and Asia, while managing regional operations centers in locations such as Ireland to support its global cloud and enterprise services.",
+    "anchorFiling": {
+        "reasoning": "The most recent fiscal period identified in the provided facts is the fiscal third quarter of 2026, which ended on March 31, 2026. The earnings report for this period was released on April 29, 2026.",
+        "type": "Earnings Release",
+        "date": "2026-04-29",
+        "fiscalPeriod": "Q3 2026"
+    },
+    "generatedDate": "2026-05-13",
+    "dataCenters": [
+        {
+            "id": "MSFT-MOUNTPLEASANT-FAIRWATER",
+            "name": "Fairwater AI Campus",
+            "city": "Mount Pleasant",
+            "state": "Wisconsin",
+            "country": "United States",
+            "address": "Durand Ave",
+            "lat": 42.715,
+            "lng": -87.912,
+            "itLoadMW": null,
+            "facilityLoadMW": null,
+            "averageRackDensityKW": null,
+            "energyConsumption": null,
+            "waterConsumption": null,
+            "wue": null,
+            "pue": null,
+            "coolingTechnology": "liquid",
+            "ownershipType": "owned",
+            "status": "under_construction",
+            "sources": [
+                "Microsoft FY2025/2026 Development Filings"
+            ],
+            "confidence": "verified"
+        },
+        {
+            "id": "MSFT-QUINCY-COLUMBIA",
+            "name": "Columbia Data Center",
+            "city": "Quincy",
+            "state": "Washington",
+            "country": "United States",
+            "address": "501 Port Industrial Way",
+            "lat": 47.24,
+            "lng": -119.86,
+            "itLoadMW": null,
+            "facilityLoadMW": null,
+            "averageRackDensityKW": null,
+            "energyConsumption": null,
+            "waterConsumption": null,
+            "wue": null,
+            "pue": null,
+            "coolingTechnology": "air",
+            "ownershipType": "owned",
+            "status": "commissioned",
+            "sources": [
+                "Microsoft Regional Infrastructure Report"
+            ],
+            "confidence": "verified"
+        },
+        {
+            "id": "MSFT-LEESBURG-IAD02",
+            "name": "IAD02 Data Center",
+            "city": "Leesburg",
+            "state": "Virginia",
+            "country": "United States",
+            "address": "Compass Creek Pkwy",
+            "lat": 39.11,
+            "lng": -77.56,
+            "itLoadMW": null,
+            "facilityLoadMW": null,
+            "averageRackDensityKW": null,
+            "energyConsumption": null,
+            "waterConsumption": null,
+            "wue": null,
+            "pue": null,
+            "coolingTechnology": "liquid",
+            "ownershipType": "owned",
+            "status": "commissioned",
+            "sources": [
+                "Loudoun County Planning Records"
+            ],
+            "confidence": "verified"
+        },
+        {
+            "id": "MSFT-GAINESVILLE-MNZ01",
+            "name": "MNZ01 Data Center",
+            "city": "Gainesville",
+            "state": "Virginia",
+            "country": "United States",
+            "address": "124-acre development site",
+            "lat": 38.8,
+            "lng": -77.6,
+            "itLoadMW": null,
+            "facilityLoadMW": null,
+            "averageRackDensityKW": null,
+            "energyConsumption": null,
+            "waterConsumption": null,
+            "wue": null,
+            "pue": null,
+            "coolingTechnology": "liquid",
+            "ownershipType": "owned",
+            "status": "under_construction",
+            "sources": [
+                "Prince William County Development Filings"
+            ],
+            "confidence": "verified"
+        },
+        {
+            "id": "MSFT-NARVIK-AI",
+            "name": "Narvik AI Project",
+            "city": "Narvik",
+            "state": null,
+            "country": "Norway",
+            "address": null,
+            "lat": 68.43,
+            "lng": 17.43,
+            "itLoadMW": null,
+            "facilityLoadMW": null,
+            "averageRackDensityKW": null,
+            "energyConsumption": null,
+            "waterConsumption": null,
+            "wue": null,
+            "pue": null,
+            "coolingTechnology": "liquid",
+            "ownershipType": "owned",
+            "status": "planned",
+            "sources": [
+                "Microsoft International Expansion Press Release"
+            ],
+            "confidence": "unverified"
+        }
+    ],
+    "energyProfile": {
+        "reasoning": "Microsoft's energy profile is compiled from the 2025 Environmental Sustainability Report and related corporate disclosures. The company has achieved 100% renewable energy matching for its global electricity consumption as of 2025. The energy mix is heavily focused on carbon-free electricity (CFE) including wind, solar, geothermal, hydropower, and nuclear, with a transition strategy for backup power to renewable biofuels. Total energy consumption for the most recent full reporting year (FY23) was 24,007,868 MWh.",
+        "totalEnergyConsumption": "24,007,868 MWh (FY23)",
+        "renewableEnergy": "Microsoft has reached 100% renewable energy matching for its global electricity consumption. The portfolio includes 34 gigawatts of contracted carbon-free electricity across 24 countries, utilizing wind, solar, geothermal, hydropower, and nuclear energy sources.",
+        "traditionalEnergy": "Microsoft is actively transitioning away from traditional fossil fuel reliance. While some legacy infrastructure may still utilize grid power, the company is actively replacing backup diesel generators with renewable biofuels and investing in carbon capture and sequestration technologies for any remaining fossil fuel-based energy usage.",
+        "sustainabilityInitiatives": "Microsoft is committed to becoming carbon negative, water positive, and zero waste by 2030. Key initiatives include the $1 billion Climate Innovation Fund, large-scale carbon removal agreements (e.g., BECCS, reforestation), the 'Community-First Infrastructure Initiative', and strict Supplier Code of Conduct requirements for 100% carbon-free energy by 2030.",
+        "sources": [
+            "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/2025-Microsoft-Environmental-Sustainability-Report.pdf",
+            "https://datacentremagazine.com/news/microsoft-matches-100-percent-renewable-electricity-2025",
+            "https://blogs.microsoft.com/on-the-issues/2025/05/29/environmental-sustainability-report/",
+            "https://www.itpro.com/infrastructure/microsoft-says-100-percent-of-its-global-electricity-consumption-is-now-matched-by-renewable-energy",
+            "https://trellis.net/article/microsoft-2025-sustainability-report-not-backing-off-climate-goal/"
+        ]
+    }
+}
