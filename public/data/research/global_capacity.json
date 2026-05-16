@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-16T21:31:40.942619",
+  "lastUpdated": "2026-05-16T21:35:41.482849",
   "version": "2.0.0",
   "capacities": [
     {
@@ -8,6 +8,15 @@
       "commissioned": 23,
       "underConstruction": 0,
       "planned": 9,
+      "liquidCooled": 0,
+      "airCooled": 0
+    },
+    {
+      "ticker": "GOOGL",
+      "totalDataCenters": 33,
+      "commissioned": 22,
+      "underConstruction": 5,
+      "planned": 6,
       "liquidCooled": 0,
       "airCooled": 0
     },

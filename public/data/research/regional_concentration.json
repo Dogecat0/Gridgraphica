@@ -1,45 +1,53 @@
 {
-  "lastUpdated": "2026-05-16T21:31:40.942960",
+  "lastUpdated": "2026-05-16T21:35:41.483774",
   "regions": [
     {
       "region": "Other",
-      "lat": 34.4149,
-      "lng": -75.8508,
-      "dataCenterCount": 41,
+      "lat": 34.5295,
+      "lng": -74.6167,
+      "dataCenterCount": 63,
       "topCompanies": [
         {
           "ticker": "MSFT",
           "count": 23
         },
         {
+          "ticker": "GOOGL",
+          "count": 22
+        },
+        {
           "ticker": "AMZN",
           "count": 18
         }
       ],
-      "summary": "Major infrastructure hub with 41 key data centers."
+      "summary": "Major infrastructure hub with 63 key data centers."
     },
     {
       "region": "Europe",
-      "lat": 54.1439,
-      "lng": 3.1666,
-      "dataCenterCount": 8,
+      "lat": 54.2579,
+      "lng": 5.1124,
+      "dataCenterCount": 14,
       "topCompanies": [
         {
           "ticker": "MSFT",
           "count": 7
         },
         {
+          "ticker": "GOOGL",
+          "count": 6
+        },
+        {
           "ticker": "AMZN",
           "count": 1
         }
       ],
-      "summary": "Major infrastructure hub with 8 key data centers."
+      "summary": "Major infrastructure hub with 14 key data centers."
     },
     {
       "region": "Asia Pacific",
-      "lat": 13.3406,
-      "lng": 106.2336,
-      "dataCenterCount": 18,
+      "lat": 14.1928,
+      "lng": 108.0538,
+      "dataCenterCount": 22,
       "topCompanies": [
         {
           "ticker": "AMZN",
@@ -48,9 +56,13 @@
         {
           "ticker": "MSFT",
           "count": 6
+        },
+        {
+          "ticker": "GOOGL",
+          "count": 4
         }
       ],
-      "summary": "Major infrastructure hub with 18 key data centers."
+      "summary": "Major infrastructure hub with 22 key data centers."
     },
     {
       "region": "North America",
@@ -67,16 +79,20 @@
     },
     {
       "region": "Latin America",
-      "lat": 20.588,
-      "lng": -100.389,
-      "dataCenterCount": 1,
+      "lat": -6.386,
+      "lng": -85.5595,
+      "dataCenterCount": 2,
       "topCompanies": [
+        {
+          "ticker": "GOOGL",
+          "count": 1
+        },
         {
           "ticker": "MSFT",
           "count": 1
         }
       ],
-      "summary": "Major infrastructure hub with 1 key data centers."
+      "summary": "Major infrastructure hub with 2 key data centers."
     }
   ]
 }

@@ -1,11 +1,17 @@
 {
-  "lastUpdated": "2026-05-16T21:31:40.943532",
+  "lastUpdated": "2026-05-16T21:35:41.484029",
   "companies": [
     {
       "ticker": "AMZN",
       "renewableEnergy": "Amazon matched 100% of electricity consumed by global operations with renewable energy in 2024, maintaining 621 projects with 33,485 MW capacity. It is the world's largest corporate purchaser of renewable energy.",
       "traditionalEnergy": "Includes a 17-year PPA for 1.92 GW from the Susquehanna nuclear plant and grid capacity partnerships with utilities like SWEPCO and NIPSCO.",
       "sustainabilityInitiatives": "Commitment to net-zero carbon by 2040, 100% renewable energy matching for global operations, and AWS water positivity goals (53% achieved by end-of-2024)."
+    },
+    {
+      "ticker": "GOOGL",
+      "renewableEnergy": "Alphabet utilizes a mix of wind, solar, geothermal, and nuclear energy. As of 2024, the company achieved 66% carbon-free energy (CFE) on an hourly basis, supported by over 22 GW of cumulative clean energy procurement since 2010.",
+      "traditionalEnergy": "While Alphabet is transitioning to 24/7 carbon-free energy, the current mix includes grid-supplied electricity that may contain fossil fuel components, as evidenced by the 11% year-on-year increase in total emissions reported in 2025.",
+      "sustainabilityInitiatives": "Key initiatives include the 24/7 CFE by 2030 goal, a 500 MW SMR nuclear agreement with Kairos Power, a 1.9 GW clean energy partnership in Minnesota with iron-air battery storage, advanced geothermal projects with Fervo Energy, and a requirement for major hardware suppliers to match 100% of electricity with clean sources by 2029."
     },
     {
       "ticker": "MSFT",
