@@ -13,7 +13,7 @@ export default function EntityPopup({ entity, company, onClose }: EntityPopupPro
     const { type, data } = entity
 
     return (
-        <div className="absolute top-8 left-8 w-80 bg-[var(--color-bg-paper)] shadow-lg border-2 border-[var(--color-ink)] z-40 animate-fade-in">
+        <div className="absolute bottom-12 left-8 w-80 bg-[var(--color-bg-paper)] shadow-lg border-2 border-[var(--color-ink)] z-40 animate-fade-in">
             {/* Header */}
             <div className="flex justify-between items-start border-b-2 border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-bg-paper)] p-3">
                 <div>
