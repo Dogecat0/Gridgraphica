@@ -1,65 +1,82 @@
 {
-  "lastUpdated": "2026-05-16T17:56:08.586573",
+  "lastUpdated": "2026-05-16T21:31:40.942960",
   "regions": [
     {
       "region": "Other",
-      "lat": 37.4615,
-      "lng": -87.6843,
-      "dataCenterCount": 18,
+      "lat": 34.4149,
+      "lng": -75.8508,
+      "dataCenterCount": 41,
       "topCompanies": [
+        {
+          "ticker": "MSFT",
+          "count": 23
+        },
         {
           "ticker": "AMZN",
           "count": 18
         }
       ],
-      "summary": "Major infrastructure hub with 18 key data centers."
+      "summary": "Major infrastructure hub with 41 key data centers."
     },
     {
       "region": "Europe",
-      "lat": 59.2705,
-      "lng": 13.056,
-      "dataCenterCount": 2,
+      "lat": 54.1439,
+      "lng": 3.1666,
+      "dataCenterCount": 8,
       "topCompanies": [
+        {
+          "ticker": "MSFT",
+          "count": 7
+        },
         {
           "ticker": "AMZN",
           "count": 1
-        },
-        {
-          "ticker": "MSFT",
-          "count": 1
         }
       ],
-      "summary": "Major infrastructure hub with 2 key data centers."
+      "summary": "Major infrastructure hub with 8 key data centers."
     },
     {
       "region": "Asia Pacific",
-      "lat": 24.8421,
-      "lng": 102.8575,
-      "dataCenterCount": 12,
+      "lat": 13.3406,
+      "lng": 106.2336,
+      "dataCenterCount": 18,
       "topCompanies": [
         {
           "ticker": "AMZN",
           "count": 12
+        },
+        {
+          "ticker": "MSFT",
+          "count": 6
         }
       ],
-      "summary": "Major infrastructure hub with 12 key data centers."
+      "summary": "Major infrastructure hub with 18 key data centers."
     },
     {
       "region": "North America",
-      "lat": 42.6733,
-      "lng": -87.2999,
-      "dataCenterCount": 5,
+      "lat": 45.5017,
+      "lng": -73.5673,
+      "dataCenterCount": 1,
       "topCompanies": [
-        {
-          "ticker": "MSFT",
-          "count": 4
-        },
         {
           "ticker": "AMZN",
           "count": 1
         }
       ],
-      "summary": "Major infrastructure hub with 5 key data centers."
+      "summary": "Major infrastructure hub with 1 key data centers."
+    },
+    {
+      "region": "Latin America",
+      "lat": 20.588,
+      "lng": -100.389,
+      "dataCenterCount": 1,
+      "topCompanies": [
+        {
+          "ticker": "MSFT",
+          "count": 1
+        }
+      ],
+      "summary": "Major infrastructure hub with 1 key data centers."
     }
   ]
 }

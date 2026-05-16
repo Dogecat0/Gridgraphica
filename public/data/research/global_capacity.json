@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-16T17:56:08.586332",
+  "lastUpdated": "2026-05-16T21:31:40.942619",
   "version": "2.0.0",
   "capacities": [
     {
@@ -13,11 +13,11 @@
     },
     {
       "ticker": "MSFT",
-      "totalDataCenters": 5,
-      "commissioned": 2,
-      "underConstruction": 2,
-      "planned": 1,
-      "liquidCooled": 4,
+      "totalDataCenters": 37,
+      "commissioned": 34,
+      "underConstruction": 0,
+      "planned": 3,
+      "liquidCooled": 2,
       "airCooled": 1
     }
   ]

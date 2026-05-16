@@ -1,45 +1,81 @@
 ## 1. Geographic Profile Summary
 
-Microsoft Corporation maintains a pervasive global presence, functioning as a cornerstone of international digital infrastructure. The company operates a sophisticated network of hyperscale data centers and advanced AI facilities strategically distributed across North America, Europe, and Asia. To ensure operational continuity and service delivery for its cloud and enterprise ecosystems, Microsoft utilizes key regional hubs, such as its significant operations center in Ireland, which serves as a critical node for managing its expansive international service portfolio.
+Microsoft Corporation maintains a dominant global presence as a leader in cloud computing, software, and hardware. The company operates an extensive infrastructure network comprising over 400 data centers distributed across more than 70 regions worldwide. Its primary operational hubs are strategically located in the United States, India, the United Kingdom, and Australia, facilitating robust service delivery and global market reach.
 
 ## 2. Data Center Footprint
 
-The following table outlines the current status and physical characteristics of the identified Microsoft data center assets. The portfolio reflects a strategic shift toward liquid cooling technologies, particularly in new construction projects.
+Microsoft maintains a vast, globally distributed network of data centers designed to support its cloud and AI infrastructure. The following table summarizes the identified facilities, their locations, and operational status.
 
-| Facility Name | Location | Status | Cooling Tech | Ownership |
-| :--- | :--- | :--- | :--- | :--- |
-| Fairwater AI Campus | Mount Pleasant, WI | Under Construction | Liquid | Owned |
-| Columbia Data Center | Quincy, WA | Commissioned | Air | Owned |
-| IAD02 Data Center | Leesburg, VA | Commissioned | Liquid | Owned |
-| MNZ01 Data Center | Gainesville, VA | Under Construction | Liquid | Owned |
-| Narvik AI Project | Narvik, Norway | Planned | Liquid | Owned |
+### 2.1 North American Infrastructure
 
-### Geographic and Technical Analysis
+| Facility Name | Location | Status | IT Load (MW) |
+| :--- | :--- | :--- | :--- |
+| Columbia Data Center | Quincy, WA | Commissioned | 622.0 |
+| East Wenatchee Campus | East Wenatchee, WA | Commissioned | - |
+| Malaga Campus | Malaga, WA | Commissioned | - |
+| Redmond Campus | Redmond, WA | Commissioned | - |
+| Leesburg Data Centers | Leesburg, VA | Commissioned | - |
+| Aldie Data Centers | Aldie, VA | Commissioned | - |
+| Manassas Data Centers | Manassas, VA | Commissioned | - |
+| Bristow Data Center | Bristow, VA | Commissioned | - |
+| Gainesville Data Centers | Gainesville, VA | Commissioned | - |
+| Boydton Data Center | Boydton, VA | Commissioned | - |
+| Chicago/Northlake Data Center | Chicago, IL | Commissioned | - |
+| Elk Grove Village Data Center | Elk Grove Village, IL | Commissioned | - |
+| Hoffman Estates Data Center | Hoffman Estates, IL | Commissioned | - |
+| San Antonio Data Center Campus | San Antonio, TX | Commissioned | - |
+| Castroville Data Center | Castroville, TX | Commissioned | - |
+| Fairwater Data Center Campus | Mount Pleasant, WI | Planned | - |
+| El Mirage Data Center | El Mirage, AZ | Commissioned | - |
+| Goodyear Data Center | Goodyear, AZ | Commissioned | - |
 
-*   **Regional Concentration:** The footprint shows a heavy concentration in the United States, specifically within the Northern Virginia data center corridor (Leesburg and Gainesville), which remains a critical hub for cloud and AI infrastructure.
-*   **Cooling Evolution:** There is a clear transition from traditional air-cooled systems (e.g., Columbia Data Center) to advanced liquid cooling solutions for all new and planned facilities. This shift is indicative of the increasing thermal requirements associated with high-density AI compute clusters.
-*   **Expansion Strategy:** The inclusion of the Narvik AI Project in Norway highlights a strategic move toward leveraging regions with abundant renewable energy and favorable ambient temperatures for large-scale AI operations.
+### 2.2 International Infrastructure
+
+| Facility Name | Location | Status |
+| :--- | :--- | :--- |
+| Narvik Data Center | Narvik, Norway | Commissioned |
+| Loughton Data Center | Loughton, UK | Commissioned |
+| London Data Center | London, UK | Commissioned |
+| Newport Data Center | Newport, UK | Commissioned |
+| Eggborough Power Station Site | Eggborough, UK | Planned |
+| Skelton Grange Data Center | Leeds, UK | Planned |
+| Querétaro Data Center | Querétaro, Mexico | Commissioned |
+| Modi’in Data Center | Modi’in, Israel | Commissioned |
+| Johannesburg Data Center | Johannesburg, South Africa | Commissioned |
+| Cape Town Data Center | Cape Town, South Africa | Commissioned |
+| Abu Dhabi Data Center | Abu Dhabi, UAE | Commissioned |
+| Dubai Data Center | Dubai, UAE | Commissioned |
+| Sydney Data Center | Sydney, Australia | Commissioned |
+| Melbourne Data Center | Melbourne, Australia | Commissioned |
+| Canberra Data Center | Canberra, Australia | Commissioned |
+| Hyderabad Data Center | Hyderabad, India | Commissioned |
+| Pune Data Center | Pune, India | Commissioned |
+| Chennai Data Center | Chennai, India | Commissioned |
+| Amsterdam Data Center | Amsterdam, Netherlands | Commissioned |
+
+### 2.3 Operational Insights
+
+*   **Ownership:** All listed facilities are owned by Microsoft, ensuring full control over the physical security and operational standards of the infrastructure.
+*   **Cooling Technology:** While many facilities utilize standard air cooling, specific high-capacity sites like the Columbia Data Center and the San Antonio Campus have integrated liquid cooling technologies to manage higher rack densities.
+*   **Strategic Expansion:** The presence of planned sites in Wisconsin and the UK indicates a continued focus on scaling capacity in key economic and technological hubs.
 
 ## 3. Energy Profile & Sustainability
 
-### 3.1 Energy Consumption Overview
-As of the most recent full reporting year (FY23), Microsoft reported a total energy consumption of **24,007,868 MWh**. The company has successfully achieved 100% renewable energy matching for its global electricity consumption, marking a significant milestone in its operational sustainability.
+### Energy Consumption Trends
+Microsoft's energy footprint has experienced substantial growth, with total energy consumption increasing by 168% since 2020. This surge is primarily attributed to the rapid scaling of AI-specific infrastructure and the global expansion of data center capacity required to support cloud and generative AI workloads.
 
-### 3.2 Renewable Energy Portfolio
-Microsoft maintains a robust portfolio of 34 gigawatts of contracted carbon-free electricity (CFE) spanning 24 countries. The energy mix is diversified across several sustainable sources:
-* **Wind and Solar:** Primary drivers of the current renewable capacity.
-* **Geothermal and Hydropower:** Utilized for baseload stability.
-* **Nuclear:** Integrated into the energy mix to ensure consistent, carbon-free power delivery.
+### Renewable Energy Procurement
+Despite the increase in demand, Microsoft maintains a commitment to match 100% of its global electricity consumption with renewable energy. The company has successfully contracted between 34 and 40 GW of carbon-free energy across 26 countries, ensuring that its operational growth is supported by clean energy sources.
 
-### 3.3 Transition from Traditional Energy
-Microsoft is aggressively phasing out reliance on traditional fossil fuels. Key strategies include:
-* **Backup Power:** Replacing legacy diesel generators with renewable biofuels.
-* **Carbon Mitigation:** Investing in carbon capture and sequestration (CCS) technologies to offset any residual fossil fuel-based energy usage.
-* **Grid Integration:** Working with utility providers to ensure the broader grid infrastructure supports the transition to 100% CFE.
+### Grid Reliability and Advanced Energy Integration
+To address the intermittency of traditional renewables and ensure grid reliability, Microsoft is diversifying its energy portfolio:
+* **Nuclear Energy:** The company has entered into agreements to support the revitalization of nuclear power, notably through the Crane Clean Energy Centre.
+* **Fusion Technology:** Microsoft is investing in the future of energy through power purchase agreements (PPAs) with companies like Helion to pioneer commercial fusion energy.
 
-### 3.4 Sustainability Initiatives & Goals
-Microsoft remains committed to its 2030 'Moonshot' goals: becoming carbon negative, water positive, and zero waste. Notable initiatives include:
-* **Climate Innovation Fund:** A $1 billion investment vehicle dedicated to accelerating the development of climate-focused technologies.
-* **Carbon Removal:** Large-scale agreements in Bioenergy with Carbon Capture and Storage (BECCS) and reforestation projects.
-* **Supply Chain Accountability:** Implementation of a strict Supplier Code of Conduct requiring partners to achieve 100% carbon-free energy by 2030.
-* **Community-First Infrastructure:** A framework designed to ensure that data center expansion projects provide tangible benefits to local communities.
+### Sustainability Initiatives and Commitments
+Microsoft remains steadfast in its goal to be carbon negative by 2030. Key initiatives include:
+* **Campus Innovation:** Implementation of geothermal energy systems at the Redmond campus.
+* **Material Science:** Adoption of low-carbon construction materials, such as CO2-injected concrete, to reduce embodied carbon.
+* **Climate Innovation Fund:** A $793 million fund dedicated to accelerating the development of climate-focused technologies.
+
+*Source: Microsoft 2024-2026 Corporate Sustainability and Infrastructure Reports*

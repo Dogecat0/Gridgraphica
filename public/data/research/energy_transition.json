@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-16T17:56:08.587084",
+  "lastUpdated": "2026-05-16T21:31:40.943532",
   "companies": [
     {
       "ticker": "AMZN",
@@ -9,9 +9,9 @@
     },
     {
       "ticker": "MSFT",
-      "renewableEnergy": "Microsoft has reached 100% renewable energy matching for its global electricity consumption. The portfolio includes 34 gigawatts of contracted carbon-free electricity across 24 countries, utilizing wind, solar, geothermal, hydropower, and nuclear energy sources.",
-      "traditionalEnergy": "Microsoft is actively transitioning away from traditional fossil fuel reliance. While some legacy infrastructure may still utilize grid power, the company is actively replacing backup diesel generators with renewable biofuels and investing in carbon capture and sequestration technologies for any remaining fossil fuel-based energy usage.",
-      "sustainabilityInitiatives": "Microsoft is committed to becoming carbon negative, water positive, and zero waste by 2030. Key initiatives include the $1 billion Climate Innovation Fund, large-scale carbon removal agreements (e.g., BECCS, reforestation), the 'Community-First Infrastructure Initiative', and strict Supplier Code of Conduct requirements for 100% carbon-free energy by 2030."
+      "renewableEnergy": "Microsoft matches 100% of its global electricity consumption with renewable energy, having contracted 34-40 GW of carbon-free energy across 26 countries.",
+      "traditionalEnergy": "While the company matches 100% of consumption with renewables, it is actively integrating nuclear power (Crane Clean Energy Centre) and fusion technology (Helion) to support grid reliability.",
+      "sustainabilityInitiatives": "Commitment to be carbon negative by 2030; initiatives include geothermal integration at the Redmond campus, nuclear and fusion energy PPAs, use of low-carbon materials like CO2-injected concrete, and a $793 million Climate Innovation Fund."
     }
   ]
 }
