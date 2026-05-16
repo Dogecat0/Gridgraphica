@@ -1,40 +1,52 @@
 ## 1. Geographic Profile Summary
 
-Amazon.com, Inc. maintains a pervasive global presence, functioning as a cornerstone of modern e-commerce and cloud computing infrastructure. The company operates an extensive network of fulfillment centers and logistics hubs across North America and international markets, facilitating rapid global distribution. Complementing its retail operations, Amazon’s AWS division manages a sophisticated array of data center campuses worldwide, providing the backbone for global artificial intelligence and cloud services. With a workforce exceeding 1.5 million employees, Amazon’s geographic strategy is defined by its ability to integrate physical logistics with high-scale digital infrastructure on a global scale.
+Amazon.com, Inc. maintains a pervasive global footprint, anchored by an extensive infrastructure network comprising over 2,500 operational sites and hundreds of data centers worldwide. The company's geographic strategy is defined by the strategic deployment of Amazon Web Services (AWS) cloud and AI infrastructure, which provides critical support to a diverse international customer base. Operations are concentrated across major economic hubs in North America, Europe, and the Asia-Pacific region, reflecting a highly integrated global supply chain and digital service architecture. This expansive presence is further characterized by a commitment to large-scale sustainability initiatives, which are integrated into the development and management of its global physical and digital assets.
 
 ## 2. Data Center Footprint
 
-The following table and descriptions outline the current and planned data center infrastructure for the identified Amazon Web Services (AWS) sites. These facilities represent a mix of established operational hubs and strategic expansion projects.
+Amazon Web Services (AWS) maintains a vast, global infrastructure footprint characterized by high-density clusters and strategic regional expansion. The current portfolio includes a mix of fully commissioned operational sites and significant planned developments designed to support increasing cloud and AI compute demands.
 
-| Facility Name | Location | Status | Facility Load (MW) | Cooling Tech |
-| :--- | :--- | :--- | :--- | :--- |
-| AWS Northern Virginia Region Hub | Ashburn, VA | Commissioned | 1500.0 | Air |
-| Project Rainier | New Carlisle, IN | Planned | 2400.0 | Liquid |
-| Warren County Data Center Complex | Warren County, MS | Planned | N/A | N/A |
+### 2.1 Operational and Planned Infrastructure
 
-### 2.1 AWS Northern Virginia Region Hub (AMZN-ASHBURN-VA-001)
-Located in Ashburn, Virginia, this facility serves as a primary anchor for the AWS global infrastructure. It is currently commissioned with a facility load of 1500 MW and utilizes air-based cooling technology. The site is fully owned by Amazon.
+The following table summarizes key data center sites, including major clusters in Northern Virginia, India, and South Korea, as well as emerging projects like 'Project Rainier' in Indiana and 'Project Atlas' in Mississippi.
 
-### 2.2 Project Rainier (AMZN-NEWCARLISLE-IN-001)
-Situated in New Carlisle, Indiana, this planned facility represents a significant expansion with a projected facility load of 2400 MW. Unlike the legacy air-cooled sites, this project is designed to utilize liquid cooling technology, reflecting a shift toward higher density infrastructure.
+| Facility Name | Location | Status | Ownership |
+| :--- | :--- | :--- | :--- |
+| Project Rainier | New Carlisle, IN, USA | Planned | Owned |
+| Cumulus Campus | Salem Township, PA, USA | Commissioned | Owned |
+| Keystone Trade Center | Falls Township, PA, USA | Commissioned | Owned |
+| Project Atlas | Madison County, MS, USA | Planned | Owned |
+| Northern Virginia Cluster | Sterling, VA, USA | Commissioned | Owned |
+| Mattermeade Campus | Caroline, VA, USA | Planned | Owned |
+| Santa Clara Data Center | Santa Clara, CA, USA | Commissioned | Owned |
+| Frankfurt Cluster | Frankfurt, Germany | Commissioned | Owned |
+| Tokyo Cluster | Tokyo, Japan | Commissioned | Owned |
+| Mumbai Cluster | Mumbai, India | Commissioned | Owned |
+| Seoul Cluster | Seoul, South Korea | Commissioned | Owned |
+| Singapore Cluster | Singapore | Commissioned | Owned |
+| Mesa Data Center | Mesa, AZ, USA | Commissioned | Owned |
+| Eastern Oregon Data Center | Boardman, OR, USA | Commissioned | Owned |
 
-### 2.3 Warren County Data Center Complex (AMZN-WARRENCOUNTY-MS-001)
-This planned development in Warren County, Mississippi, is part of Amazon's ongoing infrastructure investment strategy. While specific load capacities are currently pending finalization, the site is confirmed as an owned asset under development.
+### 2.2 Strategic Observations
+
+*   **Capacity Scaling:** Large-scale projects such as the 2,200 MW facility in New Carlisle, Indiana, and the 770 MW Mattermeade Campus in Virginia indicate a shift toward massive, utility-scale data center deployments to support hyperscale AI workloads.
+*   **Regional Concentration:** The Northern Virginia cluster remains the primary hub for North American operations, while aggressive expansion in India (Mumbai, Hyderabad, Delhi, Kolkata, Chennai, Bangalore) and South Korea (Seoul, Incheon, Goyang-si) highlights a focus on capturing high-growth emerging markets.
+*   **Operational Efficiency:** Across the portfolio, the reported Power Usage Effectiveness (PUE) of 1.15 and Water Usage Effectiveness (WUE) of 0.15 reflect a standardized, high-efficiency design philosophy applied to both legacy and new-build facilities.
 
 ## 3. Energy Profile & Sustainability
 
-### 3.1 Energy Consumption and Renewable Matching
-Amazon maintains a massive energy footprint driven by its global AWS data center operations. In 2023, AWS colocation data centers alone consumed over 7.8 million megawatt hours of electricity. As of 2024, Amazon has successfully matched 100% of its global electricity consumption with renewable energy sources. The company currently stands as the world's largest corporate purchaser of renewable energy, boasting a portfolio of 621 projects globally with a total capacity of 34 GW as of January 2025.
+### Infrastructure Scale and Energy Demand
+As of 2025, Amazon maintains a massive global footprint, operating 56.84 million square feet of data center space. While a specific aggregate annual MWh figure remains undisclosed, the scale of these operations necessitates a robust and diversified energy strategy to support the intensive computational requirements of its cloud and logistics infrastructure.
 
-### 3.2 Traditional Energy and Infrastructure
-Despite its renewable energy achievements, Amazon continues to rely on traditional energy sources to ensure operational resilience and meet the high-density power demands of AI-driven data centers. This includes:
-* **Backup Power:** Utilization of diesel generators at data center campuses to ensure uptime.
-* **Grid Integration:** Reliance on regional grid mixes for primary power.
-* **Strategic Investments:** Active investment in natural gas-powered infrastructure and emerging nuclear technologies, including Small Modular Reactors (SMRs) and X-energy, to support the scaling of data center power requirements.
+### Renewable Energy Leadership
+Amazon continues to solidify its position as the world's largest corporate purchaser of renewable energy. In 2024, the company successfully matched 100% of the electricity consumed by its global operations with renewable energy. This achievement is supported by a portfolio of 621 projects, representing a total capacity of 33,485 MW.
 
-### 3.3 Sustainability Initiatives
-Amazon is committed to achieving net-zero carbon emissions across its operations by 2040. Key pillars of this strategy include:
-* **The Climate Pledge:** A commitment to reach net-zero carbon by 2040, ten years ahead of the Paris Agreement.
-* **Water Stewardship:** A goal to be 'water positive' by 2030, returning more water to communities than is consumed in operations.
-* **Fleet Electrification:** Deployment of over 31,000 electric vehicles (EVs) to decarbonize last-mile delivery.
-* **Climate Tech Investment:** Funding climate technology startups through The Climate Pledge Fund to accelerate innovation in sustainable infrastructure.
+### Traditional Energy and Grid Integration
+To ensure operational reliability and meet baseload power requirements, Amazon has integrated traditional energy sources into its procurement strategy. Key initiatives include:
+* **Nuclear Power:** A 17-year Power Purchase Agreement (PPA) securing 1.92 GW from the Susquehanna nuclear facility.
+* **Utility Partnerships:** Strategic grid capacity collaborations with major utilities, including SWEPCO and NIPSCO, to stabilize energy supply across critical regions.
+
+### Sustainability Commitments
+Amazon remains committed to its goal of achieving net-zero carbon emissions by 2040. Beyond energy procurement, the company is actively pursuing water stewardship, with AWS reporting that it achieved 53% of its water positivity goal by the end of 2024.
+
+*Sources: Amazon 2024 Sustainability Report; Amazon 2026 Capital Expenditure and Infrastructure Disclosure.*
