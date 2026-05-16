@@ -41,8 +41,8 @@ export default function Header({
             <div className="flex items-center justify-between px-8 py-4">
                 {/* Logo + Title (The Masthead) */}
                 <div className="flex items-center gap-6">
-                    <div className="flex items-center justify-center w-12 h-12 border-2 border-[var(--color-ink)] bg-white">
-                        <BookOpen size={24} className="text-[var(--color-ink)]" />
+                    <div className="flex items-center justify-center w-12 h-12 border-2 border-[var(--color-ink)] bg-white p-1">
+                        <img src="/logo.svg" alt="Gridgraphica Logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
                         <h1 className="text-2xl font-serif font-bold text-[var(--color-ink)] leading-none uppercase tracking-tighter">
