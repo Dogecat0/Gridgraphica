@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-05-14T22:53:56.919219",
+  "lastUpdated": "2026-05-16T17:56:08.587084",
   "companies": [
     {
       "ticker": "AMZN",
-      "renewableEnergy": "Amazon matches 100% of its global electricity consumption with renewable energy, primarily through wind and solar projects. As of January 2025, it had 621 renewable energy projects globally with a total capacity of 34 GW. It is the world's largest corporate purchaser of renewable energy.",
-      "traditionalEnergy": "Traditional energy sources remain part of the grid mix and are used for backup power, such as diesel generators at data center campuses. Amazon is also investing in natural gas-powered infrastructure and nuclear energy (Small Modular Reactors and X-energy) to support its growing data center power requirements.",
-      "sustainabilityInitiatives": "Amazon is committed to reaching net-zero carbon emissions by 2040. Key initiatives include the Climate Pledge, massive investment in renewable energy projects, development of nuclear power (SMRs), water positive goals for 2030, electrification of its delivery fleet (over 31,000 EVs), and investments in climate technology startups via The Climate Pledge Fund."
+      "renewableEnergy": "Amazon matched 100% of electricity consumed by global operations with renewable energy in 2024, maintaining 621 projects with 33,485 MW capacity. It is the world's largest corporate purchaser of renewable energy.",
+      "traditionalEnergy": "Includes a 17-year PPA for 1.92 GW from the Susquehanna nuclear plant and grid capacity partnerships with utilities like SWEPCO and NIPSCO.",
+      "sustainabilityInitiatives": "Commitment to net-zero carbon by 2040, 100% renewable energy matching for global operations, and AWS water positivity goals (53% achieved by end-of-2024)."
     },
     {
       "ticker": "MSFT",

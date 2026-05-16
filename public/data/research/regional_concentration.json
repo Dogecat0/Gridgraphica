@@ -1,44 +1,65 @@
 {
-  "lastUpdated": "2026-05-14T22:53:56.918637",
+  "lastUpdated": "2026-05-16T17:56:08.586573",
   "regions": [
     {
       "region": "Other",
-      "lat": 37.7066,
-      "lng": -84.9553,
-      "dataCenterCount": 3,
+      "lat": 37.4615,
+      "lng": -87.6843,
+      "dataCenterCount": 18,
       "topCompanies": [
         {
           "ticker": "AMZN",
-          "count": 3
+          "count": 18
         }
       ],
-      "summary": "Major infrastructure hub with 3 key data centers."
-    },
-    {
-      "region": "North America",
-      "lat": 41.9663,
-      "lng": -90.733,
-      "dataCenterCount": 4,
-      "topCompanies": [
-        {
-          "ticker": "MSFT",
-          "count": 4
-        }
-      ],
-      "summary": "Major infrastructure hub with 4 key data centers."
+      "summary": "Major infrastructure hub with 18 key data centers."
     },
     {
       "region": "Europe",
-      "lat": 68.43,
-      "lng": 17.43,
-      "dataCenterCount": 1,
+      "lat": 59.2705,
+      "lng": 13.056,
+      "dataCenterCount": 2,
       "topCompanies": [
+        {
+          "ticker": "AMZN",
+          "count": 1
+        },
         {
           "ticker": "MSFT",
           "count": 1
         }
       ],
-      "summary": "Major infrastructure hub with 1 key data centers."
+      "summary": "Major infrastructure hub with 2 key data centers."
+    },
+    {
+      "region": "Asia Pacific",
+      "lat": 24.8421,
+      "lng": 102.8575,
+      "dataCenterCount": 12,
+      "topCompanies": [
+        {
+          "ticker": "AMZN",
+          "count": 12
+        }
+      ],
+      "summary": "Major infrastructure hub with 12 key data centers."
+    },
+    {
+      "region": "North America",
+      "lat": 42.6733,
+      "lng": -87.2999,
+      "dataCenterCount": 5,
+      "topCompanies": [
+        {
+          "ticker": "MSFT",
+          "count": 4
+        },
+        {
+          "ticker": "AMZN",
+          "count": 1
+        }
+      ],
+      "summary": "Major infrastructure hub with 5 key data centers."
     }
   ]
 }
