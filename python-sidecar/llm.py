@@ -66,21 +66,14 @@ LLAMA_MODEL = os.getenv("LLAMA_MODEL_REPO", "unsloth/gemma-4-E4B-it-GGUF:UD-Q4_K
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini/gemini-3.1-flash-lite-preview")
 GEMINI_N_PARALLEL = int(os.getenv("GEMINI_N_PARALLEL", "10"))
-GEMINI_CTX_PER_REQUEST = int(os.getenv("GEMINI_CTX_PER_REQUEST", "32768")) # 1M default for Flash
-
-# Featherless configuration
-FEATHERLESS_API_KEY = os.getenv("FEATHERLESS_API_KEY")
-FEATHERLESS_BASE_URL = os.getenv("FEATHERLESS_BASE_URL", "https://api.featherless.ai/v1")
-FEATHERLESS_MODEL = os.getenv("FEATHERLESS_MODEL", "moonshotai/Kimi-K2.6")
-FEATHERLESS_N_PARALLEL = int(os.getenv("FEATHERLESS_N_PARALLEL", "1"))
-FEATHERLESS_CTX_PER_REQUEST = int(os.getenv("FEATHERLESS_CTX_PER_REQUEST", "32768"))
+GEMINI_CTX_PER_REQUEST = int(os.getenv("GEMINI_CTX_PER_REQUEST", "65536")) # 1M default for Flash
 
 # Output and safety configuration
 LLAMA_OUTPUT_RESERVATION = int(os.getenv("LLAMA_OUTPUT_RESERVATION", "4096"))
 LLAMA_SAFETY_BUFFER = 64
 LLM_TEMPERATURE = float(os.getenv("LLM_TEMPERATURE", "0"))
 LLM_OUTPUT_MODE = os.getenv("LLM_OUTPUT_MODE", "multi-shot").lower()
-LLM_REQUEST_TIMEOUT = int(os.getenv("LLM_REQUEST_TIMEOUT", "30"))
+LLM_REQUEST_TIMEOUT = int(os.getenv("LLM_REQUEST_TIMEOUT", "30") or "30")
 
 
 # Active configuration selection
@@ -92,14 +85,6 @@ if LLM_PROVIDER == "gemini":
     if GEMINI_API_KEY:
         os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
     logger.debug(f"LLM Provider: GEMINI (model={ACTIVE_MODEL})")
-elif LLM_PROVIDER == "featherless":
-    ACTIVE_MODEL = f"openai/{FEATHERLESS_MODEL}"
-    ACTIVE_BASE_URL = FEATHERLESS_BASE_URL
-    ACTIVE_N_PARALLEL = FEATHERLESS_N_PARALLEL
-    ACTIVE_CTX_LIMIT = FEATHERLESS_CTX_PER_REQUEST
-    if FEATHERLESS_API_KEY:
-        os.environ["OPENAI_API_KEY"] = FEATHERLESS_API_KEY
-    logger.debug(f"LLM Provider: FEATHERLESS (model={ACTIVE_MODEL}, url={ACTIVE_BASE_URL})")
 else:
     ACTIVE_MODEL = f"openai/{LLAMA_MODEL}"
     ACTIVE_BASE_URL = LLAMA_CPP_URL
@@ -154,76 +139,11 @@ class LLMClient:
         elif not os.getenv("OPENAI_API_KEY"):
             os.environ["OPENAI_API_KEY"] = "sk-no-key-required"
             
-        # Force register model capabilities if using Featherless
-        if LLM_PROVIDER == "featherless":
-            litellm.register_model({
-                self.model: {
-                    "supports_function_calling": True,
-                    "supports_parallel_function_calling": False
-                }
-            })
-            
         logger.debug(f"Initialized LLMClient with provider={LLM_PROVIDER}, model={model}, parallel_limit={ACTIVE_N_PARALLEL}, ctx_limit={ACTIVE_CTX_LIMIT}")
 
     def get_safe_input_limit(self) -> int:
         """Absolute maximum input tokens allowed after reservation and safety buffer."""
         return ACTIVE_CTX_LIMIT - LLAMA_OUTPUT_RESERVATION - LLAMA_SAFETY_BUFFER
-
-    def _parse_unquoted_custom_syntax(self, content: str, deref_schema: dict) -> str:
-        """
-        Parses Hermes-style unquoted tool calls (e.g. call:Name{key:val,with,commas}) 
-        by dynamically anchoring on the known schema keys to avoid splitting on internal commas.
-        """
-        import re
-        import json
-        
-        def get_keys(schema):
-            keys = set()
-            if "properties" in schema:
-                keys.update(schema["properties"].keys())
-                for v in schema["properties"].values():
-                    keys.update(get_keys(v))
-            if "items" in schema:
-                keys.update(get_keys(schema["items"]))
-            return keys
-
-        schema_keys = list(get_keys(deref_schema))
-        if not schema_keys:
-            return content
-            
-        keys_pattern = "|".join(schema_keys)
-        # Lookahead: match everything until the next known key or end of string
-        regex = rf"({keys_pattern}):(.*?)(?=,(?:{keys_pattern}):|$)"
-        
-        match = re.search(r"call:\w+\{(.*)\}", content, re.DOTALL)
-        if not match:
-            return content
-            
-        inner = match.group(1)
-        
-        # Array payload handling (e.g. {extracted_facts:[{...},{...}]})
-        list_match = re.search(r'\[(.*)\]', inner, re.DOTALL)
-        if list_match:
-            top_key_match = re.search(r'(\w+):\[', inner)
-            top_key = top_key_match.group(1) if top_key_match else list(schema_keys)[0]
-            
-            list_content = list_match.group(1)
-            objects = re.findall(r'\{(.*?)\}', list_content, re.DOTALL)
-            
-            parsed_objects = []
-            for obj in objects:
-                fields = re.finditer(regex, obj, re.DOTALL)
-                parsed_obj = {f.group(1): f.group(2).strip().strip('"').strip("'") for f in fields}
-                if parsed_obj:
-                    parsed_objects.append(parsed_obj)
-            return json.dumps({top_key: parsed_objects})
-        else:
-            # Flat object handling
-            fields = re.finditer(regex, inner, re.DOTALL)
-            parsed_obj = {f.group(1): f.group(2).strip().strip('"').strip("'") for f in fields}
-            return json.dumps(parsed_obj) if parsed_obj else content
-
-
 
     def _construct_messages(self, prompt: str, system_prompt: str, response_model: Type[BaseModel], function_name: str | None = None) -> List[dict]:
         raw_schema = response_model.model_json_schema()
@@ -343,20 +263,6 @@ class LLMClient:
                         "type": "json_object",
                         "response_schema": deref_schema
                     }
-                elif LLM_PROVIDER == "featherless":
-                    # For featherless or non-native models, we use tools but rely on 
-                    kwargs["tools"] = [{
-                        "type": "function",
-                        "function": {
-                            "name": response_model.__name__,
-                            "description": "Submit structured research data.",
-                            "parameters": deref_schema
-                        }
-                    }]
-                    kwargs["tool_choice"] = {
-                        "type": "function",
-                        "function": {"name": response_model.__name__}
-                    }
                 else:
                     kwargs["response_format"] = {
                         "type": "json_schema",
@@ -433,10 +339,6 @@ class LLMClient:
         await self._log_inference(current_index, messages, name_for_logging, content, step_suffix)
 
         try:
-            if content.startswith("call:"):
-                content = self._parse_unquoted_custom_syntax(content, deref_schema)
-                return response_model.model_validate_json(content)
-
             content = repair_json(content)
             return response_model.model_validate_json(content)
         except Exception as e:

@@ -1,4 +1,4 @@
-import { ChevronDown, Brain, Loader2, BookOpen } from 'lucide-react'
+import { ChevronDown, Brain, Loader2 } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import { useGeoIntel } from '../useGeoIntel'
 import type { Company } from '../types'
@@ -86,8 +86,8 @@ export default function Header({
                                         className={`
                                             w-full text-left px-4 py-3 border-b-2 border-[var(--color-ink)]
                                             transition-colors cursor-pointer
-                                            ${!selectedCompany 
-                                                ? 'bg-[var(--color-bg-paper-dark)]' 
+                                            ${!selectedCompany
+                                                ? 'bg-[var(--color-bg-paper-dark)]'
                                                 : 'hover:bg-[var(--color-ink)] hover:text-white'
                                             }
                                         `}
