@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2026-05-16T21:35:41.484029",
+  "lastUpdated": "2026-05-17T12:49:53.278443",
   "companies": [
     {
       "ticker": "AMZN",
-      "renewableEnergy": "Amazon matched 100% of electricity consumed by global operations with renewable energy in 2024, maintaining 621 projects with 33,485 MW capacity. It is the world's largest corporate purchaser of renewable energy.",
-      "traditionalEnergy": "Includes a 17-year PPA for 1.92 GW from the Susquehanna nuclear plant and grid capacity partnerships with utilities like SWEPCO and NIPSCO.",
-      "sustainabilityInitiatives": "Commitment to net-zero carbon by 2040, 100% renewable energy matching for global operations, and AWS water positivity goals (53% achieved by end-of-2024)."
+      "renewableEnergy": "Amazon is the world's largest corporate purchaser of renewable energy, with 621 projects globally totaling 34 GW of capacity as of early 2025. Sources include solar, wind, and investments in Small Modular Reactor (SMR) nuclear technology via X-energy.",
+      "traditionalEnergy": "While aiming for net-zero, Amazon utilizes natural gas infrastructure, such as the 754 MW plant at the Baxter Wilson site in Mississippi, and maintains connections to nuclear power through the Susquehanna Steam Electric Station.",
+      "sustainabilityInitiatives": "Amazon aims for net-zero carbon emissions by 2040. Initiatives include massive renewable energy procurement, investment in SMR nuclear technology, and improving AWS data center energy efficiency, which is reported to be up to 4.1 times more efficient than on-premises alternatives."
     },
     {
       "ticker": "GOOGL",
-      "renewableEnergy": "Alphabet utilizes a mix of wind, solar, geothermal, and nuclear energy. As of 2024, the company achieved 66% carbon-free energy (CFE) on an hourly basis, supported by over 22 GW of cumulative clean energy procurement since 2010.",
-      "traditionalEnergy": "While Alphabet is transitioning to 24/7 carbon-free energy, the current mix includes grid-supplied electricity that may contain fossil fuel components, as evidenced by the 11% year-on-year increase in total emissions reported in 2025.",
-      "sustainabilityInitiatives": "Key initiatives include the 24/7 CFE by 2030 goal, a 500 MW SMR nuclear agreement with Kairos Power, a 1.9 GW clean energy partnership in Minnesota with iron-air battery storage, advanced geothermal projects with Fervo Energy, and a requirement for major hardware suppliers to match 100% of electricity with clean sources by 2029."
+      "renewableEnergy": "Google reached 66% global hourly carbon-free energy (CFE) usage in 2024. The company has a total clean energy capacity of over 22 GW, with 8 GW procured in 2024 alone. Sources include wind, solar, and battery storage, with new commitments for nuclear energy via small modular reactors (SMRs).",
+      "traditionalEnergy": "The energy mix relies on grid-supplied power through agreements with local utilities (e.g., Xcel Energy in Minnesota) to supplement renewable sources, as the company works toward its 24/7 CFE goal by 2030.",
+      "sustainabilityInitiatives": "Alphabet aims for 24/7 carbon-free energy and net-zero emissions by 2030. Initiatives include the $30 million Energy Impact Fund, investments in SMR nuclear technology, and large-scale renewable energy agreements in Texas and Minnesota."
     },
     {
       "ticker": "MSFT",
-      "renewableEnergy": "Microsoft matches 100% of its global electricity consumption with renewable energy, having contracted 34-40 GW of carbon-free energy across 26 countries.",
-      "traditionalEnergy": "While the company matches 100% of consumption with renewables, it is actively integrating nuclear power (Crane Clean Energy Centre) and fusion technology (Helion) to support grid reliability.",
-      "sustainabilityInitiatives": "Commitment to be carbon negative by 2030; initiatives include geothermal integration at the Redmond campus, nuclear and fusion energy PPAs, use of low-carbon materials like CO2-injected concrete, and a $793 million Climate Innovation Fund."
+      "renewableEnergy": "Microsoft has contracted 40 gigawatts (GW) of new renewable energy capacity across 26 countries since 2020. The mix includes wind, solar, and nuclear power purchase agreements (PPAs), alongside investments in geothermal and fusion energy technologies.",
+      "traditionalEnergy": "Traditional fossil fuels are primarily utilized for backup power generation at data centers, though Microsoft is actively transitioning these systems to renewable biofuels and exploring hydrogen fuel cell technology to replace diesel generators.",
+      "sustainabilityInitiatives": "Microsoft aims to be carbon negative, water positive, and zero waste by 2030. Key initiatives include the Climate Innovation Fund ($1 billion commitment), large-scale carbon removal contracts (22 million tonnes in FY24), the Thermal Energy Center geoexchange system, and a mandate for suppliers to transition to 100% carbon-free electricity by 2030."
     }
   ]
 }

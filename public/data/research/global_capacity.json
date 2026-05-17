@@ -1,33 +1,33 @@
 {
-  "lastUpdated": "2026-05-16T21:35:41.482849",
+  "lastUpdated": "2026-05-17T12:49:53.277266",
   "version": "2.0.0",
   "capacities": [
     {
       "ticker": "AMZN",
-      "totalDataCenters": 32,
-      "commissioned": 23,
+      "totalDataCenters": 38,
+      "commissioned": 22,
       "underConstruction": 0,
-      "planned": 9,
+      "planned": 16,
       "liquidCooled": 0,
       "airCooled": 0
     },
     {
       "ticker": "GOOGL",
-      "totalDataCenters": 33,
+      "totalDataCenters": 30,
       "commissioned": 22,
-      "underConstruction": 5,
-      "planned": 6,
+      "underConstruction": 0,
+      "planned": 8,
       "liquidCooled": 0,
       "airCooled": 0
     },
     {
       "ticker": "MSFT",
-      "totalDataCenters": 37,
-      "commissioned": 34,
+      "totalDataCenters": 34,
+      "commissioned": 30,
       "underConstruction": 0,
       "planned": 3,
-      "liquidCooled": 2,
-      "airCooled": 1
+      "liquidCooled": 30,
+      "airCooled": 0
     }
   ]
 }
