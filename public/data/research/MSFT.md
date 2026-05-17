@@ -1,65 +1,57 @@
 ## 1. Geographic Profile Summary
 
-Microsoft Corporation maintains a robust global footprint, anchored by its corporate headquarters in Redmond, Washington. The company operates a sophisticated, interconnected infrastructure comprising over 400 data centers distributed across 70 regions worldwide. This expansive network supports its core cloud computing services via Azure and facilitates the deployment of AI-driven technologies. Microsoft's operational reach is truly international, with research facilities, data center campuses, and business offices strategically positioned across North America, Europe, Asia, and Australia to ensure high-availability service delivery and localized market engagement.
+Microsoft Corporation maintains a robust global footprint, anchored by its corporate headquarters in Redmond, Washington. The company operates a massive, highly distributed infrastructure comprising over 400 data centers across more than 70 regions worldwide. This expansive network supports its core cloud services, AI research, and enterprise software solutions. Key operational hubs and strategic investments are located in the United States, Ireland, Singapore, Australia, Japan, France, Germany, Poland, Sweden, and Mexico, enabling the company to deliver services to a global customer base exceeding 1 billion users.
 
 ## 2. Data Center Footprint
 
-Microsoft maintains a vast, globally distributed network of data centers designed to support its cloud and AI infrastructure. The following table summarizes the current footprint, including key operational metrics and status.
+The following table outlines the current global data center footprint, detailing key infrastructure assets, their operational status, and reported capital investments.
 
-### 2.1 North America
-
-| Facility Name | Location | Status | IT Load (MW) | Cooling Tech |
+| Facility Name | Location | Status | Investment | Ownership |
 | :--- | :--- | :--- | :--- | :--- |
-| Columbia Data Center | Quincy, WA | Commissioned | 622.0 | Liquid |
-| IAD Datacenter Campus | Leesburg, VA | Commissioned | - | Liquid |
-| MNZ03 Datacenter | Bristow, VA | Commissioned | - | Liquid |
-| MNZ01/MNZ02 Datacenters | Gainesville, VA | Commissioned | - | Liquid |
-| BN1 Datacenter | Boydton, VA | Commissioned | - | Liquid |
-| Elk Grove Technology Park | Elk Grove Village, IL | Commissioned | - | Liquid |
-| San Antonio Campus | San Antonio, TX | Commissioned | - | Liquid |
-| Castroville Campus | Castroville, TX | Commissioned | - | Liquid |
-| FTY101 Datacenter | Douglasville, GA | Commissioned | - | Liquid |
-| Fairwater AI Datacenter | Mount Pleasant, WI | Planned | - | Liquid |
+| Fairwater AI Campus | Mt. Pleasant, WI, USA | Under Construction | $7.3B | Owned |
+| Columbia Data Center Campus | Quincy, WA, USA | Commissioned | N/A | Owned |
+| IAD Campus | Leesburg, VA, USA | Commissioned | N/A | Owned |
+| Boydton Data Center | Boydton, VA, USA | Commissioned | $2B | Owned |
+| Manassas Data Center Cluster | Manassas, VA, USA | Commissioned | N/A | Owned |
+| San Antonio Data Center Cluster | San Antonio, TX, USA | Commissioned | $1B | Owned |
+| Grange Castle Campus | Dublin, Ireland | Commissioned | $630M | Owned |
+| Agriport A7 Campus | Middenmeer, Netherlands | Commissioned | €2B | Owned |
+| Newport Data Center | Newport, Wales | Commissioned | N/A | Leased |
+| Sydney Station Road Campus | Sydney, Australia | Commissioned | N/A | Owned |
+| Kemps Creek Data Center | Kemps Creek, Australia | Commissioned | $1.3B | Owned |
+| East Wenatchee Data Center | East Wenatchee, WA, USA | Commissioned | N/A | Owned |
+| Northlake Data Center | Northlake, IL, USA | Commissioned | N/A | Owned |
+| Goodyear/El Mirage Campus | Goodyear, AZ, USA | Commissioned | $1.5B | Owned |
+| Redmond Headquarters Campus | Redmond, WA, USA | Commissioned | N/A | Owned |
+| Project FTY101 | Douglasville, GA, USA | Commissioned | N/A | Owned |
+| Sweden Central AI Infrastructure | Gävle, Sweden | Under Construction | $3.2B | Owned |
+| Sandviken Data Center | Sandviken, Sweden | Commissioned | N/A | Owned |
+| Staffanstorp Data Center | Staffanstorp, Sweden | Commissioned | N/A | Owned |
+| Narvik Hyperscale AI | Narvik, Norway | Planned | N/A | Owned |
+| Mexico Central Data Center | Querétaro, Mexico | Commissioned | $1.1B | Owned |
+| Southeast Asia-Singapore DC | Singapore | Commissioned | N/A | Owned |
+| Johor Data Center Site | Johor, Malaysia | Planned | N/A | Owned |
+| Tokyo Data Center Expansion | Tokyo, Japan | Commissioned | $2.9B | Owned |
+| France Data Center Cluster | Paris, France | Commissioned | €4B | Owned |
+| Frankfurt/Berlin DC Cluster | Frankfurt, Germany | Commissioned | €3.2B | Owned |
+| Poland Data Center Region | Warsaw, Poland | Commissioned | PLN 2.8B | Owned |
+| Skelton Grange Data Center | Skelton Grange, UK | Planned | £106.6M | Owned |
 
-### 2.2 Europe
-
-| Facility Name | Location | Status | Cooling Tech |
-| :--- | :--- | :--- | :--- |
-| AMS13/14 Datacenter | Middenmeer, NL | Commissioned | Liquid |
-| Agriport A7 Campus | Hollands Kroon, NL | Commissioned | Liquid |
-| Grange Castle Campus | Dublin, IE | Commissioned | Liquid |
-| Skelton Grange | Leeds, UK | Commissioned | Liquid |
-| Park Royal Facility | London, UK | Commissioned | Liquid |
-| Herbata Campus | Kildare, IE | Planned | Liquid |
-
-### 2.3 Asia-Pacific
-
-| Facility Name | Location | Status | IT Load (MW) | Cooling Tech |
-| :--- | :--- | :--- | :--- | :--- |
-| SYD05 Datacenter | Kemps Creek, AU | Commissioned | 190.0 | Liquid |
-| Station Road Campus | Sydney, AU | Commissioned | - | Liquid |
-| Singapore Azure Region | Singapore | Commissioned | - | Water-cooled |
-| Johor Datacenter | Johor, MY | Commissioned | - | Liquid |
-
-*Note: Data reflects a mix of verified and unverified intelligence. Facilities marked as 'planned' or 'unverified' are subject to change based on ongoing infrastructure development.*
+### Strategic Observations
+* **AI Infrastructure Scaling:** Significant capital is being directed toward high-capacity AI-specific campuses, most notably the $7.3B Fairwater AI Campus and the $3.2B Sweden Central AI project.
+* **Geographic Diversification:** The footprint maintains a strong concentration in the United States (specifically Virginia and Washington) while aggressively expanding in European markets (Germany, France, Sweden) and the Asia-Pacific region (Australia, Japan, Singapore).
+* **Operational Status:** While the majority of the portfolio is currently commissioned, the presence of 'Under Construction' and 'Planned' sites indicates a robust pipeline for future capacity expansion.
 
 ## 3. Energy Profile & Sustainability
 
-### Energy Consumption Overview
-As of the FY23 reporting period, Microsoft recorded a total energy consumption of 24,007,868 MWh. This figure represents a significant 168% increase in energy usage compared to the 2020 baseline, driven largely by the rapid expansion of cloud infrastructure and AI-driven data center requirements.
+As of February 2026, Microsoft has achieved a significant milestone by matching 100% of its global annual electricity consumption with renewable energy. This transition is supported by a robust procurement strategy involving 34 GW of carbon-free electricity contracted across 24 nations, encompassing solar, wind, and nuclear power sources.
 
-### Renewable Energy Strategy
-Microsoft has successfully achieved its goal of matching 100% of its annual global electricity consumption with renewable energy as of 2025. Key components of this strategy include:
-* **Capacity Expansion:** The company has contracted 40 gigawatts (GW) of new renewable energy capacity across 26 countries since 2020.
-* **Energy Mix:** The portfolio relies on a diverse mix of wind, solar, and nuclear power purchase agreements (PPAs).
-* **Emerging Tech:** Strategic investments are being directed toward geothermal, fusion, and hydrogen fuel cell technologies to diversify the energy supply chain.
+### Energy Procurement and Grid Integration
+While the company has successfully matched its total consumption, the underlying grid mix continues to rely on traditional energy sources in regions where renewable procurement is still scaling. To mitigate this, Microsoft is aggressively replacing legacy grid reliance with carbon-free Power Purchase Agreements (PPAs). Notable initiatives include the 10.5 GW Brookfield agreement and the Crane Clean Energy Centre nuclear PPA, which serve as cornerstones for regional decarbonization.
 
-### Traditional Energy & Backup Systems
-While the company has achieved its renewable matching goal, traditional fossil fuels remain in use primarily for backup power generation at data centers. Microsoft is currently executing a transition strategy to replace diesel generators with renewable biofuels and is actively piloting hydrogen fuel cell technology to ensure long-term operational resilience without carbon reliance.
+### Sustainability Targets
+Microsoft remains committed to its ambitious 2030 and 2050 environmental goals:
+* **2030 Targets:** Achieve carbon negative, water positive, and zero waste status.
+* **2050 Target:** Remove all historical carbon emissions generated since the company's founding.
 
-### Sustainability Initiatives & 2030 Goals
-Microsoft maintains a commitment to becoming carbon negative, water positive, and zero waste by 2030. Notable initiatives include:
-* **Climate Innovation Fund:** A $1 billion commitment to accelerate the development of climate solutions.
-* **Carbon Removal:** Execution of large-scale carbon removal contracts, totaling 22 million tonnes in FY24.
-* **Infrastructure Innovation:** Implementation of the Thermal Energy Center geoexchange system.
-* **Supply Chain Mandate:** A requirement for all suppliers to transition to 100% carbon-free electricity by 2030.
+*Source: Microsoft Corporate Energy and Sustainability Report Data (Feb 2026)*

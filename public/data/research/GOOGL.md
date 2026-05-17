@@ -1,45 +1,61 @@
 ## 1. Geographic Profile Summary
 
-Alphabet Inc. operates as a preeminent global technology holding company, headquartered in Mountain View, California. The organization maintains an expansive international presence, with operations, offices, and critical data center infrastructure spanning nearly 60 countries and over 200 cities across six continents. This strategic geographic distribution supports the company's diverse portfolio—ranging from Google Services and Google Cloud to advanced autonomous vehicle initiatives via Waymo—and underscores a robust capital investment strategy focused on technical infrastructure across North America, Europe, Asia, and South America.
+Alphabet Inc. maintains a robust and expansive global infrastructure network, strategically positioned to support its massive data processing and service delivery requirements. The company's geographic footprint is characterized by high-capacity data center clusters across three primary regions:
+
+* **North America:** Significant operational presence within the United States, with key infrastructure hubs located in Texas, Ohio, and Tennessee.
+* **Europe:** Strategic deployment of facilities in Finland, Ireland, and the Netherlands, ensuring low-latency connectivity and regulatory compliance within the European market.
+* **Asia:** Critical infrastructure investments in Singapore and Taiwan, facilitating service delivery across the rapidly growing Asia-Pacific digital landscape.
+
+This distributed network underscores Alphabet's commitment to global scalability and operational resilience.
 
 ## 2. Data Center Footprint
 
-The global data center infrastructure for this entity spans multiple continents, reflecting a robust strategy for regional cloud availability and edge computing. The portfolio includes a mix of fully commissioned, operational facilities and strategic sites currently in the planning phase.
+Google maintains a robust global data center infrastructure, characterized by high-efficiency liquid cooling technologies and a Power Usage Effectiveness (PUE) of 1.1 across its fleet. The following table summarizes the current operational and planned facilities.
 
-### 2.1 Operational and Planned Infrastructure
+### 2.1 Facility Overview
 
-| Facility Name | Location | Status | Capacity (MW) | Cooling Tech |
+| Name | Location | Status | Investment | Cooling |
 | :--- | :--- | :--- | :--- | :--- |
-| Bridgeport Data Center | Bridgeport, AL, USA | Commissioned | 50.0 | N/A |
-| St. Ghislain Data Center | St. Ghislain, Belgium | Commissioned | 223.0 | N/A |
-| Hamina Data Center | Hamina, Finland | Commissioned | 140.0 | Seawater cooling |
-| Changhua County Data Center | Changhua County, Taiwan | Commissioned | 60.0 | N/A |
-| Kronstorf Data Center | Kronstorf, Austria | Planned | 150.0 | N/A |
-| Quilicura Data Center | Quilicura, Chile | Commissioned | N/A | N/A |
-| The Dalles Data Center | The Dalles, OR, USA | Commissioned | N/A | N/A |
-| Berkeley County Campus | Berkeley County, SC, USA | Commissioned | N/A | Water cooling tanks |
+| Council Bluffs | Council Bluffs, IA, USA | Commissioned | $6.8B | Liquid |
+| Loudoun County | Loudoun County, VA, USA | Commissioned | $4.2B | Liquid |
+| Mayes County | Mayes County, OK, USA | Commissioned | $3B | Liquid |
+| St. Ghislain | St. Ghislain, Belgium | Commissioned | $3B | Liquid |
+| Berkeley County | Berkeley County, SC, USA | Commissioned | $2.4B | Liquid |
+| Hamina | Hamina, Finland | Commissioned | $2B | Liquid |
+| The Dalles | The Dalles, OR, USA | Commissioned | $1.8B | Liquid |
+| Storey County | Storey County, NV, USA | Commissioned | $1.8B | Liquid |
+| New Albany | New Albany, OH, USA | Commissioned | $1.7B | Liquid |
+| Changhua County | Changhua County, Taiwan | Commissioned | $1.6B | Liquid |
+| Douglas County | Douglas County, GA, USA | Commissioned | $1.2B | Liquid |
+| Lenoir | Lenoir, NC, USA | Commissioned | $1.2B | Liquid |
+| Dublin | Dublin, Ireland | Commissioned | $1B | Liquid |
+| Mesa | Mesa, AZ, USA | Commissioned | $1B | Liquid |
+| Midlothian | Midlothian, TX, USA | Commissioned | $880M | Liquid |
+| Jackson County | Jackson County, AL, USA | Commissioned | $600M | Liquid |
+| Henderson | Henderson, NV, USA | Commissioned | $600M | Liquid |
+| Papillion | Papillion, NE, USA | Commissioned | $600M | Liquid |
+| Clarksville | Clarksville, TN, USA | Commissioned | $600M | Liquid |
+| Eemshaven | Eemshaven, Netherlands | Commissioned | $2.5B | Liquid |
+| Middenmeer | Middenmeer, Netherlands | Commissioned | $500M | Liquid |
+| Quilicura | Quilicura, Chile | Commissioned | $290M | Liquid |
+| Singapore | Singapore, Singapore | Commissioned | $5B | Liquid |
+| Fredericia | Fredericia, Denmark | Commissioned | $685.98M | Liquid |
 
-### 2.2 Strategic Observations
+### 2.2 Strategic Expansion
 
-*   **Geographic Diversity:** The footprint is heavily concentrated in the United States, particularly in Texas and South Carolina, while maintaining significant international presence in Europe (Netherlands, Belgium, Finland) and Asia-Pacific (Singapore, Taiwan, Thailand).
-*   **Cooling Innovation:** Facilities such as the Hamina Data Center utilize advanced seawater cooling, while the Berkeley County campus employs water cooling tanks, indicating a focus on energy-efficient thermal management.
-*   **Expansion Pipeline:** Significant investment is directed toward new capacity in Texas (Hutto, Dallas, Austin) and South America (Canelones, Uruguay), signaling a continued aggressive expansion strategy to meet rising demand for compute resources.
+Google continues to expand its footprint with several planned or under-construction sites, notably in Texas (Ridgeville, Red Oak, Armstrong, Haskell, Wilbarger), the Netherlands (Winschoten, Groningen, Agriport), and Taiwan (Tainan, Yunlin). These sites reflect a continued commitment to scaling capacity to meet global demand for cloud and AI services.
 
 ## 3. Energy Profile & Sustainability
 
-### Energy Consumption and Demand
-While Alphabet does not report a single aggregate figure for total energy consumption, the company's energy footprint is characterized by rapid expansion in global data center infrastructure and the escalating power requirements of AI compute workloads. Capital expenditure guidance for 2026, projected between $180 billion and $190 billion, underscores the significant energy-intensive nature of these infrastructure investments.
+### Energy Consumption Overview
+As of the 2023 reporting period, total energy consumption reached 25,307,000 MWh. While the company maintains a commitment to 100% renewable energy matching, current operations remain integrated with regional grid mixes that include non-renewable sources. The organization is actively transitioning toward a 24/7 carbon-free energy (CFE) model by 2030.
 
-### Renewable Energy Portfolio
-As of 2024, Google has achieved 66% global hourly carbon-free energy (CFE) usage. The company maintains a robust clean energy capacity exceeding 22 GW, bolstered by the procurement of 8 GW in 2024 alone. The current portfolio leverages a diverse mix of wind, solar, and battery storage, with a strategic pivot toward emerging technologies, including commitments to small modular reactors (SMRs) for nuclear energy.
+### Renewable Energy & Carbon-Free Progress
+Google has demonstrated significant progress in its decarbonization efforts, achieving 66% hourly carbon-free energy usage in 2024. Over the past decade, the company has procured a cumulative 22 GW of clean energy, with 8 GW added in 2024 alone.
 
-### Traditional Energy and Grid Integration
-To bridge the gap toward its 24/7 CFE goal, the company continues to rely on grid-supplied power. This is managed through strategic agreements with local utilities, such as Xcel Energy in Minnesota, ensuring reliable power delivery while the company scales its renewable infrastructure to meet the 2030 target.
+### Strategic Sustainability Initiatives
+To bridge the gap toward 24/7 CFE, the company is investing in advanced energy technologies and large-scale infrastructure:
+* **Advanced Nuclear:** A 50 MW project with Kairos Power and a commitment to a 500 MW Small Modular Reactor (SMR) agreement by 2035.
+* **Grid-Scale Renewables:** A 1.9 GW clean energy project in Pine Island, MN, and a 7.8 GW net-new energy capacity contract in Texas.
 
-### Sustainability Initiatives
-Alphabet remains committed to achieving net-zero emissions and 24/7 carbon-free energy by 2030. Key initiatives driving this transition include:
-* **Energy Impact Fund:** A $30 million investment vehicle focused on accelerating clean energy innovation.
-* **Nuclear Investment:** Active exploration and investment in SMR technology to provide baseload carbon-free power.
-* **Large-Scale Procurement:** Continued expansion of renewable energy agreements, notably in Texas and Minnesota, to decarbonize regional operations.
-
-*Sources: Alphabet 2024-2026 Corporate Infrastructure and Sustainability Reports*
+*Sources: Alphabet Inc. 2024-2026 Sustainability and Infrastructure Reports.*
