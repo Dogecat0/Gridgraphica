@@ -60,11 +60,11 @@ function DataCenterContent({ data, company }: { data: DataCenter; company: Compa
                 </span>
             </div>
 
-            {data.itLoadMW && (
-                <p className="text-sm font-serif italic text-[var(--color-ink-muted)] leading-snug border-l-2 border-[var(--color-ink)] pl-3">
-                    Capacity: {data.itLoadMW} MW
-                </p>
-            )}
+            <div className="text-xs font-serif italic text-[var(--color-ink-muted)] leading-tight border-l-2 border-[var(--color-ink)] pl-3 space-y-1">
+                {data.itLoadMW && <p>Capacity: <span className="text-[var(--color-ink)] font-bold">{data.itLoadMW} MW</span></p>}
+                {data.investment && <p>Investment: <span className="text-[var(--color-ink)] font-bold">{data.investment}</span></p>}
+                {data.squareFootage && <p>Area: <span className="text-[var(--color-ink)] font-bold">{data.squareFootage.toLocaleString()} sq ft</span></p>}
+            </div>
 
             <div className="flex items-center gap-4 text-[10px] font-mono text-[var(--color-ink-muted)] mt-2 pt-3 border-t border-[var(--color-border-muted)]">
                 <span>LAT: {data.lat.toFixed(4)}</span>

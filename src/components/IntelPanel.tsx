@@ -166,10 +166,17 @@ function OverviewTab({ intel, onNavigate }: { intel: GeoIntelligence; onNavigate
                                 <p className="text-xs font-mono text-[var(--color-ink-muted)] mb-3 flex items-center gap-1">
                                     <MapPin size={10} /> {dc.city}, {dc.country}
                                 </p>
-                                <p className="text-sm font-serif italic text-[var(--color-ink-muted)] leading-snug mb-4">
-                                    Capacity: <span className="text-[var(--color-ink)] font-bold">{dc.itLoadMW ? `${dc.itLoadMW} MW` : 'Unknown'}</span>
-                                    <br />Cooling: {dc.coolingTechnology || 'Unknown'}
-                                </p>
+                                <div className="text-sm font-serif italic text-[var(--color-ink-muted)] leading-snug mb-4 space-y-1 border-l-2 border-[var(--color-ink)] pl-3">
+                                    {dc.itLoadMW && <p>Capacity: <span className="text-[var(--color-ink)] font-bold">{dc.itLoadMW} MW</span></p>}
+                                    {dc.investment && <p>Investment: <span className="text-[var(--color-ink)] font-bold">{dc.investment}</span></p>}
+                                    {dc.squareFootage && <p>Area: <span className="text-[var(--color-ink)] font-bold">{dc.squareFootage.toLocaleString()} sq ft</span></p>}
+                                    {dc.coolingTechnology && <p>Cooling: <span className="text-[var(--color-ink)] font-bold">{dc.coolingTechnology}</span></p>}
+                                    {dc.certifications && dc.certifications.length > 0 && (
+                                        <p className="text-[10px] font-mono pt-1">
+                                            CERT: {dc.certifications.join(' · ')}
+                                        </p>
+                                    )}
+                                </div>
                                 <button
                                     onClick={() => dc.lat && dc.lng && onNavigate(dc.lat, dc.lng)}
                                     className={`text-[10px] font-mono font-bold border border-[var(--color-ink)] px-3 py-1 transition-all flex items-center gap-2 ${dc.lat && dc.lng ? 'hover:bg-[var(--color-ink)] hover:text-white cursor-pointer' : 'opacity-50 cursor-not-allowed'}`}

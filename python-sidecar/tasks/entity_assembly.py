@@ -29,15 +29,15 @@ def _build_data_center_queries(data_centers, user_query: str) -> list[str]:
     for dc in data_centers:
         missing_address = not dc.address
         unverified_coords = dc.confidence != "verified"
-        missing_capacity = dc.itLoadMW is None and dc.facilityLoadMW is None
+        missing_scale = dc.itLoadMW is None and not dc.investment and not dc.squareFootage
         missing_efficiency = dc.pue is None or dc.coolingTechnology is None
         
-        if missing_address or unverified_coords or missing_capacity or missing_efficiency:
+        if missing_address or unverified_coords or missing_scale or missing_efficiency:
             location_hint = " ".join(filter(None, [dc.city, dc.state, dc.country]))
             needs = []
             if missing_address or unverified_coords: needs.append("exact street address location coordinates")
-            if missing_capacity: needs.append("critical IT load MW utility feed power capacity")
-            if missing_efficiency: needs.append("PUE and cooling technology")
+            if missing_scale: needs.append("critical IT load MW and total investment cost and square footage")
+            if missing_efficiency: needs.append("PUE and cooling technology and certifications")
             
             needs_str = " and ".join(needs)
             queries.append(

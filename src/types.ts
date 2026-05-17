@@ -17,17 +17,15 @@ export interface DataCenter {
     lat: number
     lng: number
     itLoadMW?: number | null
-    facilityLoadMW?: number | null
-    averageRackDensityKW?: number | null
-    wue?: number | null
-    status?: 'planned' | 'under_construction' | 'commissioned' | 'unknown' | null
-    energyConsumption?: string | null
-    waterConsumption?: string | null
+    investment?: string | null
+    squareFootage?: number | null
     pue?: number | null
     coolingTechnology?: string | null
+    certifications?: string[] | null
+    status?: 'planned' | 'under_construction' | 'commissioned' | 'unknown' | null
     ownershipType: OwnershipType
     sources?: string[] | null
-    confidence?: 'verified' | 'unverified' | 'city_center_approximation' | null
+    confidence?: 'verified' | 'unverified' | 'city_center_approximation' | 'unknown' | null
     /** Set at runtime when flattening — the parent company name */
     companyId?: string
 }
