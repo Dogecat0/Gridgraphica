@@ -365,7 +365,10 @@ class LLMClient:
         if LLM_OUTPUT_MODE == "one-shot":
             if facts:
                 target_tokens = _get_target_tokens(response_model)
-                summary = await self.summarize_to_fit(facts, target_tokens, system_prompt, focus=system_prompt)
+                # Build a more descriptive focus that includes the schema's purpose
+                model_desc = response_model.model_json_schema().get("description", "")
+                focus_context = f"{system_prompt} (Schema: {response_model.__name__} - {model_desc})"
+                summary = await self.summarize_to_fit(facts, target_tokens, system_prompt, focus=focus_context)
                 final_prompt = prompt.replace("__FACTS__", summary)
             else:
                 final_prompt = prompt
@@ -478,9 +481,17 @@ class LLMClient:
 
         # Determine safe chunk size for a summary request
         if focus:
-            summary_template = f"Following content is too long. Summarize it into high-density facts, prioritizing information related to: {focus}. Keep all relevant information, only condense the language used:\n{{chunk}}"
+            summary_template = (
+                f"Following content is too long. Summarize it into high-density facts, prioritizing information related to: {focus}. "
+                "MANDATE: You MUST preserve all exact numerical values, technical metrics, units of measure, specific dates, and proper names. "
+                "Do not generalize or omit specific measurements. Only condense the narrative language.\n{chunk}"
+            )
         else:
-            summary_template = "Following content is too long. Summarize it into high-density facts, keep all information, only condense the language used:\n{chunk}"
+            summary_template = (
+                "Following content is too long. Summarize it into high-density facts. "
+                "MANDATE: You MUST preserve all exact numerical values, technical metrics, units of measure, specific dates, and proper names. "
+                "Keep all information, only condense the narrative language used:\n{chunk}"
+            )
             
         safe_chunk_tokens = self.calculate_safe_chunk_size(system_prompt, summary_template, SummarySchema)
         
